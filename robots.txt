@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://ygunoil-ai-tools-hub.vercel.app/sitemap.xml

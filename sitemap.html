@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Site Map — AiToolsHub | 100+ Tools &amp; Pages</title>
+    <meta name="description" content="Human-readable index of AiToolsHub: home, tool center (100+ anchors), HTML site map, and link to the XML sitemap for crawlers. Find AI helpers, JSON, JWT, IP, UUID, and more.">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <meta name="theme-color" content="#020617">
+    <link rel="canonical" href="https://ygunoil-ai-tools-hub.vercel.app/sitemap.html">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="AiToolsHub">
+    <meta property="og:url" content="https://ygunoil-ai-tools-hub.vercel.app/sitemap.html">
+    <meta property="og:title" content="AiToolsHub — HTML site map (100+ tools)">
+    <meta property="og:description" content="Browse all main pages and deep links to each free online tool. XML sitemap linked for search engines.">
+    <meta property="og:image" content="https://ygunoil-ai-tools-hub.vercel.app/og.svg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="AiToolsHub site map — list of tools and pages">
+    <meta property="og:locale" content="en_US">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="AiToolsHub — HTML site map">
+    <meta name="twitter:description" content="All pages and 100+ tool links in one index.">
+    <meta name="twitter:image" content="https://ygunoil-ai-tools-hub.vercel.app/og.svg">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2809928683583930"
+     crossorigin="anonymous"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#6366f1',
+                        secondary: '#ec4899',
+                        dark: '#0f172a',
+                        darker: '#020617'
+                    },
+                    fontFamily: { sans: ['Inter', 'system-ui', 'sans-serif'] }
+                }
+            }
+        }
+    </script>
+    <style>
+        .sitemap-page-body { position: relative; overflow-x: hidden; }
+        .sitemap-ambient {
+            pointer-events: none;
+            position: fixed;
+            inset: 0;
+            z-index: 0;
+            background:
+                radial-gradient(ellipse 75% 55% at 15% -5%, rgba(99, 102, 241, 0.26), transparent 52%),
+                radial-gradient(ellipse 55% 40% at 105% 15%, rgba(236, 72, 153, 0.16), transparent 48%),
+                radial-gradient(ellipse 45% 35% at 70% 105%, rgba(34, 211, 238, 0.1), transparent 42%),
+                linear-gradient(180deg, #020617 0%, #0f172a 50%, #020617 100%);
+        }
+        .sitemap-ambient::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background-image: linear-gradient(rgba(148, 163, 184, 0.035) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(148, 163, 184, 0.035) 1px, transparent 1px);
+            background-size: 40px 40px;
+            mask-image: radial-gradient(ellipse 75% 55% at 50% 35%, black, transparent);
+        }
+        @media (prefers-reduced-motion: no-preference) {
+            .sitemap-ambient { animation: smap-ambient 20s ease-in-out infinite alternate; }
+        }
+        @keyframes smap-ambient {
+            0% { filter: hue-rotate(0deg) saturate(1); }
+            100% { filter: hue-rotate(10deg) saturate(1.06); }
+        }
+
+        .smap-header {
+            border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+            background: rgba(15, 23, 42, 0.65);
+            box-shadow: 0 0 40px -12px rgba(99, 102, 241, 0.12);
+            backdrop-filter: blur(14px);
+            -webkit-backdrop-filter: blur(14px);
+        }
+        .smap-nav-link {
+            padding: 0.35rem 0.65rem;
+            border-radius: 0.5rem;
+            color: rgb(203, 213, 225);
+            border: 1px solid transparent;
+            transition: color 0.2s, border-color 0.2s, background 0.2s, box-shadow 0.2s;
+        }
+        .smap-nav-link:hover {
+            color: #fff;
+            border-color: rgba(129, 140, 248, 0.35);
+            background: rgba(99, 102, 241, 0.12);
+            box-shadow: 0 0 20px -6px rgba(99, 102, 241, 0.35);
+        }
+        .smap-nav-current {
+            color: #fff;
+            border-color: rgba(165, 180, 252, 0.45);
+            background: linear-gradient(135deg, rgba(99, 102, 241, 0.22), rgba(139, 92, 246, 0.1));
+            box-shadow: 0 0 24px -5px rgba(99, 102, 241, 0.45), inset 0 1px 0 rgba(255, 255, 255, 0.06);
+        }
+
+        .smap-hero-title {
+            background: linear-gradient(115deg, #f8fafc 0%, #c7d2fe 35%, #e9d5ff 70%, #fce7f3 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .smap-xml-chip {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.35rem;
+            margin-left: 0.25rem;
+            padding: 0.2rem 0.65rem;
+            border-radius: 9999px;
+            font-size: 0.8125rem;
+            font-weight: 500;
+            color: #c7d2fe;
+            border: 1px solid rgba(129, 140, 248, 0.4);
+            background: rgba(99, 102, 241, 0.12);
+            transition: border-color 0.2s, box-shadow 0.2s, background 0.2s;
+        }
+        .smap-xml-chip:hover {
+            border-color: rgba(165, 180, 252, 0.65);
+            background: rgba(99, 102, 241, 0.2);
+            box-shadow: 0 0 20px -4px rgba(99, 102, 241, 0.45);
+        }
+
+        .smap-card {
+            position: relative;
+            border-radius: 1rem;
+            border: 1px solid rgba(99, 102, 241, 0.2);
+            background: linear-gradient(160deg, rgba(15, 23, 42, 0.9) 0%, rgba(2, 6, 23, 0.72) 100%);
+            box-shadow:
+                0 0 0 1px rgba(255, 255, 255, 0.04) inset,
+                0 20px 50px -15px rgba(0, 0, 0, 0.55),
+                0 0 60px -20px rgba(99, 102, 241, 0.12);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+        .smap-card::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            border-radius: inherit;
+            padding: 1px;
+            background: linear-gradient(125deg, rgba(165, 180, 252, 0.3), transparent 45%, transparent 55%, rgba(236, 72, 153, 0.12));
+            -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+            mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+            -webkit-mask-composite: xor;
+            mask-composite: exclude;
+            pointer-events: none;
+        }
+        .smap-card-title-text {
+            background: linear-gradient(90deg, #f1f5f9, #c7d2fe 55%, #e9d5ff);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .smap-list li {
+            border-radius: 0.5rem;
+            border: 1px solid rgba(51, 65, 85, 0.6);
+            padding: 0.5rem 0.75rem;
+            background: rgba(15, 23, 42, 0.45);
+            transition: border-color 0.2s, box-shadow 0.2s;
+        }
+        .smap-list li:hover {
+            border-color: rgba(129, 140, 248, 0.35);
+            box-shadow: 0 0 18px -6px rgba(99, 102, 241, 0.2);
+        }
+        .smap-list a { color: #a5b4fc; transition: color 0.15s; }
+        .smap-list a:hover { color: #e0e7ff; }
+
+        .smap-tool-link {
+            display: block;
+            border-radius: 0.625rem;
+            border: 1px solid rgba(71, 85, 105, 0.75);
+            padding: 0.5rem 0.75rem;
+            font-size: 0.875rem;
+            line-height: 1.35;
+            color: #c7d2fe;
+            background: rgba(15, 23, 42, 0.55);
+            transition: border-color 0.2s, color 0.2s, background 0.2s, box-shadow 0.25s, transform 0.15s;
+        }
+        .smap-tool-link:hover {
+            color: #fff;
+            border-color: rgba(129, 140, 248, 0.55);
+            background: rgba(49, 46, 129, 0.25);
+            box-shadow: 0 0 28px -6px rgba(99, 102, 241, 0.45);
+        }
+        @media (prefers-reduced-motion: no-preference) {
+            .smap-tool-link:hover { transform: translateY(-1px); }
+        }
+
+        .smap-footer {
+            border-top: 1px solid rgba(255, 255, 255, 0.06);
+            background: linear-gradient(180deg, transparent, rgba(15, 23, 42, 0.5));
+        }
+    </style>
+</head>
+<body class="sitemap-page-body bg-[#020617] text-gray-200 min-h-screen font-sans antialiased selection:bg-primary/30 selection:text-white">
+    <div class="sitemap-ambient" aria-hidden="true"></div>
+    <header class="smap-header sticky top-0 z-50">
+        <div class="container relative z-[1] mx-auto flex flex-wrap items-center justify-between gap-4 px-4 py-4">
+            <a href="index.html" class="text-xl font-bold tracking-tight">
+                <span class="bg-gradient-to-r from-indigo-300 via-violet-300 to-fuchsia-300 bg-clip-text text-transparent">
+                    <i class="fa fa-bolt mr-2 text-indigo-400"></i>AiToolsHub
+                </span>
+            </a>
+            <nav class="flex flex-wrap items-center gap-2 text-sm md:gap-3">
+                <a href="index.html" class="smap-nav-link">Home</a>
+                <a href="index.html#tools" class="smap-nav-link">Tools</a>
+                <a href="index.html#about" class="smap-nav-link">About</a>
+                <a href="tools.html" class="smap-nav-link">Tool hub</a>
+                <span class="smap-nav-link smap-nav-current cursor-default">Sitemap</span>
+            </nav>
+        </div>
+    </header>
+
+    <main class="relative z-[1] container mx-auto max-w-4xl px-4 py-12 md:py-16">
+        <p class="mb-2 text-[10px] font-semibold uppercase tracking-[0.25em] text-slate-500">Index</p>
+        <h1 class="smap-hero-title mb-3 text-3xl font-bold md:text-4xl">Sitemap</h1>
+        <p class="mb-4 max-w-2xl text-slate-400">Direct links to every main page and all 100+ online tools.</p>
+        <p class="mb-10 text-sm text-slate-500">
+            XML sitemap for crawlers:
+            <a href="https://ygunoil-ai-tools-hub.vercel.app/sitemap.xml" class="smap-xml-chip"><i class="fa fa-code text-xs opacity-80"></i> sitemap.xml</a>
+        </p>
+
+        <section class="smap-card mb-10 p-6 md:p-8">
+            <h2 class="mb-5 flex items-center gap-3 text-xl font-semibold text-white">
+                <span class="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg border border-indigo-500/30 bg-indigo-500/10 text-indigo-300"><i class="fa fa-home"></i></span>
+                <span class="smap-card-title-text">Main pages</span>
+            </h2>
+            <ul class="smap-list space-y-2 text-gray-300">
+                <li><a href="index.html">Home</a> <span class="text-slate-500">index.html</span></li>
+                <li><a href="index.html#tools">Tools section (anchor)</a></li>
+                <li><a href="index.html#about">About (anchor)</a></li>
+                <li><a href="tools.html">Tool hub (all tools)</a> <span class="text-slate-500">tools.html</span></li>
+                <li><span class="text-slate-400">Sitemap (this page)</span> <span class="text-slate-500">sitemap.html</span></li>
+            </ul>
+        </section>
+
+        <section class="smap-card p-6 md:p-8">
+            <h2 class="mb-5 flex items-center gap-3 text-xl font-semibold text-white">
+                <span class="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg border border-fuchsia-500/25 bg-fuchsia-500/10 text-fuchsia-300"><i class="fa fa-wrench"></i></span>
+                <span class="smap-card-title-text">Online tools (100+)</span>
+            </h2>
+            <p class="mb-5 text-sm text-slate-400">Each link opens the matching panel in <code class="rounded-md border border-white/10 bg-slate-950/60 px-2 py-0.5 font-mono text-xs text-indigo-300">tools.html</code>.</p>
+            <ul class="grid gap-2 sm:grid-cols-2">
+                <li><a href="tools.html#aitoken" class="smap-tool-link">AI Token Estimate (rough)</a></li>
+                <li><a href="tools.html#aichat" class="smap-tool-link">Chat Messages JSON</a></li>
+                <li><a href="tools.html#aiprep" class="smap-tool-link">LLM Paste Cleaner</a></li>
+                <li><a href="tools.html#aifew" class="smap-tool-link">Few-shot Messages JSON</a></li>
+                <li><a href="tools.html#aimdplain" class="smap-tool-link">Markdown → Plain (rough)</a></li>
+                <li><a href="tools.html#aifence" class="smap-tool-link">Markdown Code Fence</a></li>
+                <li><a href="tools.html#aifile" class="smap-tool-link">Safe Filename (AI output)</a></li>
+                <li><a href="tools.html#aijsonfix" class="smap-tool-link">JSON Relax Try-Parse</a></li>
+                <li><a href="tools.html#aisnip" class="smap-tool-link">System Prompt Snippets</a></li>
+                <li><a href="tools.html#aicurl" class="smap-tool-link">Chat Completions cURL</a></li>
+                <li><a href="tools.html#aiseed" class="smap-tool-link">Random Seed (repro)</a></li>
+                <li><a href="tools.html#aitsvmd" class="smap-tool-link">TSV → Markdown Table</a></li>
+                <li><a href="tools.html#ailines" class="smap-tool-link">Lines → Bullet / Numbered List</a></li>
+                <li><a href="tools.html#aibug" class="smap-tool-link">Error → LLM Bug Report</a></li>
+                <li><a href="tools.html#airag" class="smap-tool-link">RAG-style Reference Wrap</a></li>
+                <li><a href="tools.html#aichunk" class="smap-tool-link">Long Text Chunker</a></li>
+                <li><a href="tools.html#aicont" class="smap-tool-link">Continue-Writing Prompt</a></li>
+                <li><a href="tools.html#aiformat" class="smap-tool-link">Answer-Format Suffix</a></li>
+                <li><a href="tools.html#ip" class="smap-tool-link">IP Address Lookup</a></li>
+                <li><a href="tools.html#password" class="smap-tool-link">Password Generator</a></li>
+                <li><a href="tools.html#qrcode" class="smap-tool-link">QR Code Generator</a></li>
+                <li><a href="tools.html#json" class="smap-tool-link">JSON Formatter</a></li>
+                <li><a href="tools.html#timestamp" class="smap-tool-link">Timestamp Converter</a></li>
+                <li><a href="tools.html#textcase" class="smap-tool-link">Text Case Converter</a></li>
+                <li><a href="tools.html#wordcount" class="smap-tool-link">Word Counter</a></li>
+                <li><a href="tools.html#color" class="smap-tool-link">Color Code Converter</a></li>
+                <li><a href="tools.html#unit" class="smap-tool-link">Unit Converter</a></li>
+                <li><a href="tools.html#calculator" class="smap-tool-link">Scientific Calculator</a></li>
+                <li><a href="tools.html#base64" class="smap-tool-link">Base64 Image Converter</a></li>
+                <li><a href="tools.html#url" class="smap-tool-link">URL Encoder/Decoder</a></li>
+                <li><a href="tools.html#zhcn" class="smap-tool-link">Traditional/Simplified Chinese</a></li>
+                <li><a href="tools.html#textclean" class="smap-tool-link">Text Cleaner</a></li>
+                <li><a href="tools.html#card" class="smap-tool-link">Card Number Validator</a></li>
+                <li><a href="tools.html#percent" class="smap-tool-link">Percentage Calculator</a></li>
+                <li><a href="tools.html#countdown" class="smap-tool-link">Countdown Timer</a></li>
+                <li><a href="tools.html#rename" class="smap-tool-link">Bulk File Renamer</a></li>
+                <li><a href="tools.html#hash" class="smap-tool-link">MD5/SHA Hash Generator</a></li>
+                <li><a href="tools.html#useragent" class="smap-tool-link">User-Agent Checker</a></li>
+                <li><a href="tools.html#uuid" class="smap-tool-link">UUID Generator</a></li>
+                <li><a href="tools.html#random" class="smap-tool-link">Random Number</a></li>
+                <li><a href="tools.html#lorem" class="smap-tool-link">Lorem Ipsum</a></li>
+                <li><a href="tools.html#b64text" class="smap-tool-link">Base64 Text</a></li>
+                <li><a href="tools.html#hex" class="smap-tool-link">Hex UTF-8</a></li>
+                <li><a href="tools.html#rot13" class="smap-tool-link">ROT13</a></li>
+                <li><a href="tools.html#email" class="smap-tool-link">Email Checker</a></li>
+                <li><a href="tools.html#regex" class="smap-tool-link">Regex Tester</a></li>
+                <li><a href="tools.html#sortlines" class="smap-tool-link">Sort Lines</a></li>
+                <li><a href="tools.html#reverse" class="smap-tool-link">Reverse Text</a></li>
+                <li><a href="tools.html#dedupe" class="smap-tool-link">Dedupe Lines</a></li>
+                <li><a href="tools.html#slug" class="smap-tool-link">URL Slug</a></li>
+                <li><a href="tools.html#htmlent" class="smap-tool-link">HTML Entities</a></li>
+                <li><a href="tools.html#jwt" class="smap-tool-link">JWT Decoder</a></li>
+                <li><a href="tools.html#csvjson" class="smap-tool-link">CSV / JSON</a></li>
+                <li><a href="tools.html#radix" class="smap-tool-link">Base Converter</a></li>
+                <li><a href="tools.html#utf8len" class="smap-tool-link">UTF-8 Length</a></li>
+                <li><a href="tools.html#jescape" class="smap-tool-link">JS Escape</a></li>
+                <li><a href="tools.html#httpcode" class="smap-tool-link">HTTP Status</a></li>
+                <li><a href="tools.html#stopwatch" class="smap-tool-link">Stopwatch</a></li>
+                <li><a href="tools.html#worldtime" class="smap-tool-link">World Clock</a></li>
+                <li><a href="tools.html#age" class="smap-tool-link">Age</a></li>
+                <li><a href="tools.html#bmi" class="smap-tool-link">BMI</a></li>
+                <li><a href="tools.html#tip" class="smap-tool-link">Tip / Split</a></li>
+                <li><a href="tools.html#loan" class="smap-tool-link">Loan Estimator</a></li>
+                <li><a href="tools.html#compound" class="smap-tool-link">Compound Interest</a></li>
+                <li><a href="tools.html#roman" class="smap-tool-link">Roman Numerals</a></li>
+                <li><a href="tools.html#diff" class="smap-tool-link">Text Diff</a></li>
+                <li><a href="tools.html#striphtml" class="smap-tool-link">Strip HTML</a></li>
+                <li><a href="tools.html#linenum" class="smap-tool-link">Line Numbers</a></li>
+                <li><a href="tools.html#randline" class="smap-tool-link">Random Line</a></li>
+                <li><a href="tools.html#repeat" class="smap-tool-link">String Repeat</a></li>
+                <li><a href="tools.html#pad" class="smap-tool-link">String Pad</a></li>
+                <li><a href="tools.html#exturl" class="smap-tool-link">Extract URLs</a></li>
+                <li><a href="tools.html#extemail" class="smap-tool-link">Extract Emails</a></li>
+                <li><a href="tools.html#metagen" class="smap-tool-link">Meta Tags</a></li>
+                <li><a href="tools.html#wordwrap" class="smap-tool-link">Word Wrap</a></li>
+                <li><a href="tools.html#cronhelp" class="smap-tool-link">Cron Guide</a></li>
+                <li><a href="tools.html#shades" class="smap-tool-link">Color Shades</a></li>
+                <li><a href="tools.html#round" class="smap-tool-link">Decimal Rounder</a></li>
+            </ul>
+        </section>
+    </main>
+
+    <footer class="smap-footer relative z-[1] py-10 text-center text-sm text-slate-500">
+        <a href="index.html" class="inline-flex items-center gap-2 rounded-lg border border-transparent px-3 py-2 text-indigo-300 transition hover:border-indigo-500/30 hover:bg-indigo-500/10 hover:text-indigo-200">
+            <i class="fa fa-arrow-left text-xs"></i> Back to home
+        </a>
+    </footer>
+</body>
+</html>

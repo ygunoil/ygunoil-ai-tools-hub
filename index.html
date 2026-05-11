@@ -1,0 +1,974 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AiToolsHub | 100+ Free Online Tools — AI, JSON, JWT, IP &amp; More</title>
+    <meta name="description" content="100+ free browser tools for developers: LLM helpers (tokens, chat JSON, RAG, chunking, cURL), JSON/JWT/CSV, IP &amp; UUID, QR, regex, hashes &amp; calculators. Homepage: curated AI products &amp; GitHub repos. No signup — runs locally when possible.">
+    <meta name="keywords" content="AiToolsHub, free online tools, browser tools, developer utilities, AI token estimate, few-shot JSON, LLM tools, RAG prompt, text chunking, chat JSON, JSON formatter, JWT decode, CSV to JSON, IP lookup, UUID generator, QR code, regex tester, password generator, MD5, SHA256, timestamp, unit converter, no signup">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <meta name="author" content="AiToolsHub">
+    <meta name="theme-color" content="#020617">
+    <link rel="canonical" href="https://ygunoil-ai-tools-hub.vercel.app/">
+    <link rel="alternate" hreflang="en" href="https://ygunoil-ai-tools-hub.vercel.app/">
+    <link rel="alternate" hreflang="x-default" href="https://ygunoil-ai-tools-hub.vercel.app/">
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='85'%3E%E2%9A%A1%3C/text%3E%3C/svg%3E">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="AiToolsHub">
+    <meta property="og:url" content="https://ygunoil-ai-tools-hub.vercel.app/">
+    <meta property="og:title" content="AiToolsHub | 100+ Free Online Tools — AI, JSON, JWT, IP &amp; More">
+    <meta property="og:description" content="100+ browser utilities: LLM helpers, JSON/JWT/CSV, IP &amp; UUID, QR, regex, hashes, calculators. Curated AI &amp; GitHub shortcuts on the homepage. Free, no account.">
+    <meta property="og:image" content="https://ygunoil-ai-tools-hub.vercel.app/og.svg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="AiToolsHub — 100+ free browser-based utilities and AI helpers">
+    <meta property="og:locale" content="en_US">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="AiToolsHub — 100+ Free Online Tools">
+    <meta name="twitter:description" content="18+ AI helpers plus JSON, JWT, IP, UUID, QR, regex, hashes &amp; more. Curated AI &amp; GitHub links on the homepage. Free in your browser.">
+    <meta name="twitter:image" content="https://ygunoil-ai-tools-hub.vercel.app/og.svg">
+    <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://ygunoil-ai-tools-hub.vercel.app/#organization","name":"AiToolsHub","url":"https://ygunoil-ai-tools-hub.vercel.app/","logo":{"@type":"ImageObject","url":"https://ygunoil-ai-tools-hub.vercel.app/og.svg","width":1200,"height":630}},{"@type":"WebSite","@id":"https://ygunoil-ai-tools-hub.vercel.app/#website","name":"AiToolsHub","alternateName":"AI Tools Hub","url":"https://ygunoil-ai-tools-hub.vercel.app/","description":"100+ free browser tools including LLM helpers; homepage lists curated AI services and GitHub repos. IP lookup, JSON, UUID, calculators, hashes, and more. No registration.","inLanguage":"en-US","publisher":{"@id":"https://ygunoil-ai-tools-hub.vercel.app/#organization"}},{"@type":"WebPage","@id":"https://ygunoil-ai-tools-hub.vercel.app/#webpage","url":"https://ygunoil-ai-tools-hub.vercel.app/","name":"AiToolsHub — 100+ Free Online Tools","description":"Free browser utilities: 18+ AI helpers and 100+ tools for JSON, JWT, IP, UUID, QR, regex, hashes, and calculators. Curated AI and GitHub shortcuts on the homepage.","inLanguage":"en-US","isPartOf":{"@id":"https://ygunoil-ai-tools-hub.vercel.app/#website"},"about":{"@type":"Thing","name":"Web-based developer utilities"},"primaryImageOfPage":{"@type":"ImageObject","url":"https://ygunoil-ai-tools-hub.vercel.app/og.svg"},"mainEntity":{"@id":"https://ygunoil-ai-tools-hub.vercel.app/#tool-index"}},{"@type":"ItemList","@id":"https://ygunoil-ai-tools-hub.vercel.app/#tool-index","name":"AiToolsHub online tools","description":"Indexed tools.html anchors (78 entries).","numberOfItems":78,"itemListElement":[{"@type":"ListItem","position":1,"name":"AI Token Estimate (rough)","url":"https://ygunoil-ai-tools-hub.vercel.app/tools.html#aitoken"},{"@type":"ListItem","position":2,"name":"Chat Messages JSON Builder","url":"https://ygunoil-ai-tools-hub.vercel.app/tools.html#aichat"},{"@type":"ListItem","position":3,"name":"LLM Paste Cleaner","url":"https://ygunoil-ai-tools-hub.vercel.app/tools.html#aiprep"},{"@type":"ListItem","position":4,"name":"Few-shot Messages JSON","url":"https://ygunoil-ai-tools-hub.vercel.app/tools.html#aifew"},{"@type":"ListItem","position":5,"name":"Markdown to Plain Text (rough)","url":"https://ygunoil-ai-tools-hub.vercel.app/tools.html#aimdplain"},{"@type":"ListItem","position":6,"name":"Markdown Code Fence Wrapper","url":"https://ygunoil-ai-tools-hub.vercel.app/tools.html#aifence"},{"@type":"ListItem","position":7,"name":"Safe Filename for AI Output","url":"https://ygunoil-ai-tools-hub.vercel.app/tools.html#aifile"},{"@type":"ListItem","position":8,"name":"JSON Relax Try-Parse","url":"https://ygunoil-ai-tools-hub.vercel.app/tools.html#aijsonfix"},{"@type":"ListItem","position":9,"name":"System Prompt Snippets","url":"https://ygunoil-ai-tools-hub.vercel.app/tools.html#aisnip"},{"@type":"ListItem","position":10,"name":"Chat Completions cURL","url":"https://ygunoil-ai-tools-hub.vercel.app/tools.html#aicurl"},{"@type":"ListItem","position":11,"name":"Random Seed Generator","url":"https://ygunoil-ai-tools-hub.vercel.app/tools.html#aiseed"},{"@type":"ListItem","position":12,"name":"TSV to Markdown Table","url":"https://ygunoil-ai-tools-hub.vercel.app/tools.html#aitsvmd"},{"@type":"ListItem","position":13,"name":"Lines to Bullet or Numbered List","url":"https://ygunoil-ai-tools-hub.vercel.app/tools.html#ailines"},{"@type":"ListItem","position":14,"name":"Error to LLM Bug Report","url":"https://ygunoil-ai-tools-hub.vercel.app/tools.html#aibug"},{"@type":"ListItem","position":15,"name":"RAG-style Reference Wrap","url":"https://ygunoil-ai-tools-hub.vercel.app/tools.html#airag"},{"@type":"ListItem","position":16,"name":"Long Text Chunker for LLMs","url":"https://ygunoil-ai-tools-hub.vercel.app/tools.html#aichunk"},{"@type":"ListItem","position":17,"name":"Continue-Writing Prompt","url":"https://ygunoil-ai-tools-hub.vercel.app/tools.html#aicont"},{"@type":"ListItem","position":18,"name":"Answer-Format Suffix","url":"https://ygunoil-ai-tools-hub.vercel.app/tools.html#aiformat"},{"@type":"ListItem","position":19,"name":"IP Address Lookup","url":"https://ygunoil-ai-tools-hub.vercel.app/tools.html#ip"},{"@type":"ListItem","position":20,"name":"Password Generator","url":"https://ygunoil-ai-tools-hub.vercel.app/tools.html#password"},{"@type":"ListItem","position":21,"name":"QR Code Generator","url":"https://ygunoil-ai-tools-hub.vercel.app/tools.html#qrcode"},{"@type":"ListItem","position":22,"name":"JSON Formatter","url":"https://ygunoil-ai-tools-hub.vercel.app/tools.html#json"},{"@type":"ListItem","position":23,"name":"Timestamp Converter","url":"https://ygunoil-ai-tools-hub.vercel.app/tools.html#timestamp"},{"@type":"ListItem","position":24,"name":"Text Case Converter","url":"https://ygunoil-ai-tools-hub.vercel.app/tools.html#textcase"},{"@type":"ListItem","position":25,"name":"Word Counter","url":"https://ygunoil-ai-tools-hub.vercel.app/tools.html#wordcount"},{"@type":"ListItem","position":26,"name":"Color Code Converter","url":"https://ygunoil-ai-tools-hub.vercel.app/tools.html#color"},{"@type":"ListItem","position":27,"name":"Unit Converter","url":"https://ygunoil-ai-tools-hub.vercel.app/tools.html#unit"},{"@type":"ListItem","position":28,"name":"Scientific Calculator","url":"https://ygunoil-ai-tools-hub.vercel.app/tools.html#calculator"},{"@type":"ListItem","position":29,"name":"Base64 Image Converter","url":"https://ygunoil-ai-tools-hub.vercel.app/tools.html#base64"},{"@type":"ListItem","position":30,"name":"URL Encoder Decoder","url":"https://ygunoil-ai-tools-hub.vercel.app/tools.html#url"},{"@type":"ListItem","position":31,"name":"Traditional Simplified Chinese","url":"https://ygunoil-ai-tools-hub.vercel.app/tools.html#zhcn"},{"@type":"ListItem","position":32,"name":"Text Cleaner","url":"https://ygunoil-ai-tools-hub.vercel.app/tools.html#textclean"},{"@type":"ListItem","position":33,"name":"Card Number Validator","url":"https://ygunoil-ai-tools-hub.vercel.app/tools.html#card"},{"@type":"ListItem","position":34,"name":"Percentage Calculator","url":"https://ygunoil-ai-tools-hub.vercel.app/tools.html#percent"},{"@type":"ListItem","position":35,"name":"Countdown Timer","url":"https://ygunoil-ai-tools-hub.vercel.app/tools.html#countdown"},{"@type":"ListItem","position":36,"name":"Bulk File Renamer","url":"https://ygunoil-ai-tools-hub.vercel.app/tools.html#rename"},{"@type":"ListItem","position":37,"name":"MD5 SHA Hash Generator","url":"https://ygunoil-ai-tools-hub.vercel.app/tools.html#hash"},{"@type":"ListItem","position":38,"name":"User-Agent Checker","url":"https://ygunoil-ai-tools-hub.vercel.app/tools.html#useragent"},{"@type":"ListItem","position":39,"name":"UUID Generator","url":"https://ygunoil-ai-tools-hub.vercel.app/tools.html#uuid"},{"@type":"ListItem","position":40,"name":"Random Integer Generator","url":"https://ygunoil-ai-tools-hub.vercel.app/tools.html#random"},{"@type":"ListItem","position":41,"name":"Lorem Ipsum Generator","url":"https://ygunoil-ai-tools-hub.vercel.app/tools.html#lorem"},{"@type":"ListItem","position":42,"name":"Base64 Text Encoder","url":"https://ygunoil-ai-tools-hub.vercel.app/tools.html#b64text"},{"@type":"ListItem","position":43,"name":"Hex UTF-8 Converter","url":"https://ygunoil-ai-tools-hub.vercel.app/tools.html#hex"},{"@type":"ListItem","position":44,"name":"ROT13 Cipher","url":"https://ygunoil-ai-tools-hub.vercel.app/tools.html#rot13"},{"@type":"ListItem","position":45,"name":"Email Format Checker","url":"https://ygunoil-ai-tools-hub.vercel.app/tools.html#email"},{"@type":"ListItem","position":46,"name":"Regex Tester","url":"https://ygunoil-ai-tools-hub.vercel.app/tools.html#regex"},{"@type":"ListItem","position":47,"name":"Sort Lines","url":"https://ygunoil-ai-tools-hub.vercel.app/tools.html#sortlines"},{"@type":"ListItem","position":48,"name":"Reverse Text","url":"https://ygunoil-ai-tools-hub.vercel.app/tools.html#reverse"},{"@type":"ListItem","position":49,"name":"Remove Duplicate Lines","url":"https://ygunoil-ai-tools-hub.vercel.app/tools.html#dedupe"},{"@type":"ListItem","position":50,"name":"URL Slug Generator","url":"https://ygunoil-ai-tools-hub.vercel.app/tools.html#slug"},{"@type":"ListItem","position":51,"name":"HTML Entity Encode Decode","url":"https://ygunoil-ai-tools-hub.vercel.app/tools.html#htmlent"},{"@type":"ListItem","position":52,"name":"JWT Payload Decoder","url":"https://ygunoil-ai-tools-hub.vercel.app/tools.html#jwt"},{"@type":"ListItem","position":53,"name":"CSV JSON Converter","url":"https://ygunoil-ai-tools-hub.vercel.app/tools.html#csvjson"},{"@type":"ListItem","position":54,"name":"Number Base Converter","url":"https://ygunoil-ai-tools-hub.vercel.app/tools.html#radix"},{"@type":"ListItem","position":55,"name":"UTF-8 Byte Length","url":"https://ygunoil-ai-tools-hub.vercel.app/tools.html#utf8len"},{"@type":"ListItem","position":56,"name":"JavaScript String Escape","url":"https://ygunoil-ai-tools-hub.vercel.app/tools.html#jescape"},{"@type":"ListItem","position":57,"name":"HTTP Status Lookup","url":"https://ygunoil-ai-tools-hub.vercel.app/tools.html#httpcode"},{"@type":"ListItem","position":58,"name":"Stopwatch","url":"https://ygunoil-ai-tools-hub.vercel.app/tools.html#stopwatch"},{"@type":"ListItem","position":59,"name":"World Clock","url":"https://ygunoil-ai-tools-hub.vercel.app/tools.html#worldtime"},{"@type":"ListItem","position":60,"name":"Age Calculator","url":"https://ygunoil-ai-tools-hub.vercel.app/tools.html#age"},{"@type":"ListItem","position":61,"name":"BMI Calculator","url":"https://ygunoil-ai-tools-hub.vercel.app/tools.html#bmi"},{"@type":"ListItem","position":62,"name":"Tip Split Calculator","url":"https://ygunoil-ai-tools-hub.vercel.app/tools.html#tip"},{"@type":"ListItem","position":63,"name":"Loan Payment Estimator","url":"https://ygunoil-ai-tools-hub.vercel.app/tools.html#loan"},{"@type":"ListItem","position":64,"name":"Compound Interest Calculator","url":"https://ygunoil-ai-tools-hub.vercel.app/tools.html#compound"},{"@type":"ListItem","position":65,"name":"Roman Numerals Converter","url":"https://ygunoil-ai-tools-hub.vercel.app/tools.html#roman"},{"@type":"ListItem","position":66,"name":"Text Line Diff","url":"https://ygunoil-ai-tools-hub.vercel.app/tools.html#diff"},{"@type":"ListItem","position":67,"name":"Strip HTML Tags","url":"https://ygunoil-ai-tools-hub.vercel.app/tools.html#striphtml"},{"@type":"ListItem","position":68,"name":"Add Line Numbers","url":"https://ygunoil-ai-tools-hub.vercel.app/tools.html#linenum"},{"@type":"ListItem","position":69,"name":"Random Line Picker","url":"https://ygunoil-ai-tools-hub.vercel.app/tools.html#randline"},{"@type":"ListItem","position":70,"name":"String Repeater","url":"https://ygunoil-ai-tools-hub.vercel.app/tools.html#repeat"},{"@type":"ListItem","position":71,"name":"String Pad","url":"https://ygunoil-ai-tools-hub.vercel.app/tools.html#pad"},{"@type":"ListItem","position":72,"name":"Extract URLs","url":"https://ygunoil-ai-tools-hub.vercel.app/tools.html#exturl"},{"@type":"ListItem","position":73,"name":"Extract Emails","url":"https://ygunoil-ai-tools-hub.vercel.app/tools.html#extemail"},{"@type":"ListItem","position":74,"name":"Meta Tags Generator","url":"https://ygunoil-ai-tools-hub.vercel.app/tools.html#metagen"},{"@type":"ListItem","position":75,"name":"Word Wrap","url":"https://ygunoil-ai-tools-hub.vercel.app/tools.html#wordwrap"},{"@type":"ListItem","position":76,"name":"Cron Expression Guide","url":"https://ygunoil-ai-tools-hub.vercel.app/tools.html#cronhelp"},{"@type":"ListItem","position":77,"name":"Color Shades Generator","url":"https://ygunoil-ai-tools-hub.vercel.app/tools.html#shades"},{"@type":"ListItem","position":78,"name":"Decimal Rounder","url":"https://ygunoil-ai-tools-hub.vercel.app/tools.html#round"}]}]}</script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2809928683583930"
+     crossorigin="anonymous"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#6366f1',
+                        secondary: '#ec4899',
+                        dark: '#0f172a',
+                        darker: '#020617'
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .text-gradient {
+                background-clip: text;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
+            .bg-glass {
+                background: rgba(15, 23, 42, 0.7);
+                backdrop-filter: blur(12px);
+            }
+            .card-hover {
+                transition: all 0.3s ease;
+            }
+            .card-hover:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 20px 25px -5px rgba(99, 102, 241, 0.1), 0 10px 10px -5px rgba(236, 72, 153, 0.1);
+            }
+            .animate-float {
+                animation: float 6s ease-in-out infinite;
+            }
+            @keyframes float {
+                0% { transform: translateY(0px); }
+                50% { transform: translateY(-20px); }
+                100% { transform: translateY(0px); }
+            }
+        }
+        /* AI directory strip (home only) */
+        #ai-nav {
+            scroll-margin-top: 5.5rem;
+        }
+        #ai-nav .ai-nav-bg {
+            position: absolute;
+            inset: 0;
+            pointer-events: none;
+            background:
+                radial-gradient(ellipse 80% 50% at 20% 0%, rgba(99, 102, 241, 0.22), transparent 55%),
+                radial-gradient(ellipse 60% 45% at 100% 30%, rgba(236, 72, 153, 0.14), transparent 50%),
+                radial-gradient(ellipse 50% 40% at 50% 100%, rgba(34, 211, 238, 0.1), transparent 45%);
+            opacity: 0.9;
+        }
+        #ai-nav .ai-nav-grid {
+            position: absolute;
+            inset: 0;
+            pointer-events: none;
+            opacity: 0.12;
+            background-image:
+                linear-gradient(rgba(148, 163, 184, 0.35) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(148, 163, 184, 0.35) 1px, transparent 1px);
+            background-size: 56px 56px;
+            mask-image: radial-gradient(ellipse 70% 55% at 50% 40%, black, transparent);
+        }
+        @media (prefers-reduced-motion: no-preference) {
+            #ai-nav .ai-nav-bg { animation: ai-nav-hue 14s ease-in-out infinite alternate; }
+        }
+        @keyframes ai-nav-hue {
+            from { filter: hue-rotate(0deg) saturate(1); }
+            to { filter: hue-rotate(12deg) saturate(1.08); }
+        }
+        .ai-link-card {
+            position: relative;
+            display: block;
+            overflow: hidden;
+            border-radius: 0.875rem;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            background: linear-gradient(145deg, rgba(15, 23, 42, 0.92), rgba(30, 27, 75, 0.45));
+            padding: 1rem 1.1rem;
+            text-decoration: none;
+            color: inherit;
+            transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.3s ease;
+            box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.03) inset;
+        }
+        .ai-link-card::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            border-radius: inherit;
+            padding: 1px;
+            background: linear-gradient(135deg, rgba(165, 180, 252, 0.45), transparent 42%, transparent 58%, rgba(244, 114, 182, 0.25));
+            -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+            mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+            -webkit-mask-composite: xor;
+            mask-composite: exclude;
+            pointer-events: none;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        .ai-link-card:hover {
+            transform: translateY(-4px) scale(1.01);
+            border-color: rgba(129, 140, 248, 0.45);
+            box-shadow: 0 16px 40px -12px rgba(99, 102, 241, 0.35), 0 0 40px -10px rgba(34, 211, 238, 0.15);
+        }
+        .ai-link-card:hover::after { opacity: 1; }
+        .ai-link-card .ai-link-tag {
+            font-size: 0.65rem;
+            font-weight: 700;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: rgba(167, 243, 208, 0.95);
+        }
+        .ai-link-card .ai-link-host {
+            font-size: 0.7rem;
+            color: rgba(148, 163, 184, 0.95);
+            margin-top: 0.25rem;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+    </style>
+</head>
+<body class="bg-darker text-gray-200 min-h-screen font-sans overflow-x-hidden">
+    <!-- Background decoration -->
+    <div class="fixed top-0 left-0 w-full h-full overflow-hidden opacity-20 pointer-events-none">
+        <div class="absolute top-[10%] left-[5%] w-64 h-64 bg-primary/30 rounded-full blur-3xl animate-float"></div>
+        <div class="absolute top-[40%] right-[10%] w-80 h-80 bg-secondary/20 rounded-full blur-3xl animate-float" style="animation-delay: 2s;"></div>
+        <div class="absolute bottom-[20%] left-[20%] w-72 h-72 bg-primary/20 rounded-full blur-3xl animate-float" style="animation-delay: 4s;"></div>
+    </div>
+
+    <!-- Header -->
+    <header class="bg-glass sticky top-0 z-50 border-b border-gray-800">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <a href="/" class="text-2xl font-bold bg-gradient-to-r from-primary to-secondary text-gradient" title="AiToolsHub — free online tools home">
+                <i class="fa fa-bolt mr-2" aria-hidden="true"></i>AiToolsHub
+            </a>
+            <nav class="hidden md:flex flex-wrap items-center gap-x-6 gap-y-2">
+                <a href="#ai-nav" class="text-cyan-300/90 hover:text-cyan-200 transition-colors">AI links</a>
+                <a href="#tools" class="hover:text-primary transition-colors">Tools</a>
+                <a href="#about" class="hover:text-primary transition-colors">About</a>
+                <a href="#contact" class="hover:text-primary transition-colors">Contact</a>
+                <a href="sitemap.html" class="hover:text-primary transition-colors">Sitemap</a>
+            </nav>
+            <button class="md:hidden text-2xl">
+                <i class="fa fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <main>
+    <!-- Hero Section -->
+    <section class="relative py-20 md:py-32 overflow-hidden" aria-labelledby="hero-heading">
+        <div class="container mx-auto px-4 text-center relative z-10">
+            <h1 id="hero-heading" class="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-primary via-secondary to-primary text-gradient">
+                100+ Free Online Tools for Everyday Tasks
+            </h1>
+            <p class="text-lg md:text-xl text-gray-300 max-w-3xl mx-auto mb-4 leading-relaxed">
+                <strong class="text-gray-200 font-semibold">100+ free tools</strong> in your browser — including <strong class="text-gray-200 font-semibold">AI helpers</strong> for real LLM work: token estimates, chat &amp; few-shot JSON, bug-report and RAG-style prompts, long-text chunking, paste cleanup, Markdown &amp; cURL snippets, and more.
+            </p>
+            <p class="text-base md:text-lg text-gray-400 max-w-2xl mx-auto mb-10 leading-relaxed">
+                Round it out with everyday utilities: IP &amp; UUID lookup, QR codes, JSON &amp; CSV, JWT decode, regex tester, passwords &amp; hashes, finance calculators, timestamps, unit conversion, and text helpers. No install, no sign-up — and we keep processing in the browser whenever we can, for privacy.
+            </p>
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                <a href="#tools" class="inline-block bg-gradient-to-r from-primary to-secondary px-8 py-4 rounded-lg font-semibold text-lg hover:opacity-90 transition-opacity">
+                    Explore Tools <i class="fa fa-arrow-down ml-2"></i>
+                </a>
+                <a href="#ai-nav" class="inline-block rounded-lg border border-cyan-500/40 bg-cyan-950/30 px-8 py-4 font-semibold text-lg text-cyan-100 hover:border-cyan-400/60 hover:bg-cyan-900/40 transition-colors">
+                    AI sites &amp; GitHub <i class="fa fa-compass ml-2 text-sm opacity-80"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- AI directory: popular services + famous repos -->
+    <section id="ai-nav" class="relative border-y border-white/5 bg-dark/80 py-16 md:py-24 overflow-hidden" aria-labelledby="ai-nav-heading">
+        <div class="ai-nav-bg" aria-hidden="true"></div>
+        <div class="ai-nav-grid" aria-hidden="true"></div>
+        <div class="container mx-auto px-4 relative z-10">
+            <p class="text-center text-[10px] font-bold uppercase tracking-[0.4em] text-violet-400/90 mb-3">Editor&apos;s launchpad</p>
+            <h2 id="ai-nav-heading" class="text-center text-3xl md:text-5xl font-extrabold mb-4 bg-gradient-to-r from-cyan-200 via-indigo-200 to-fuchsia-200 text-gradient">
+                AI Hubs &amp; Open Source
+            </h2>
+            <p class="text-center text-gray-400 max-w-2xl mx-auto mb-3 text-sm md:text-base leading-relaxed">
+                Shortcuts to the products and repos people actually use: chats, API consoles, model hubs, and reference implementations on GitHub.
+            </p>
+            <p class="text-center text-gray-500 max-w-2xl mx-auto mb-14 text-xs md:text-sm leading-relaxed">
+                Each tile opens the official destination in a new tab — no iframes, so you always know when you&apos;ve left AiToolsHub.
+            </p>
+
+            <div class="mb-3 flex items-center gap-3 text-cyan-200/95">
+                <span class="flex h-10 w-10 items-center justify-center rounded-xl bg-cyan-500/15 border border-cyan-400/30"><i class="fa fa-globe text-lg"></i></span>
+                <h3 class="text-xl md:text-2xl font-bold tracking-tight">Popular AI services</h3>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 mb-16">
+                <a href="https://chat.openai.com" target="_blank" rel="noopener noreferrer" class="ai-link-card card-hover"><span class="ai-link-tag">Chat</span><span class="block text-lg font-semibold text-white mt-1">ChatGPT</span><span class="ai-link-host">chat.openai.com</span></a>
+                <a href="https://claude.ai" target="_blank" rel="noopener noreferrer" class="ai-link-card card-hover"><span class="ai-link-tag">Anthropic</span><span class="block text-lg font-semibold text-white mt-1">Claude</span><span class="ai-link-host">claude.ai</span></a>
+                <a href="https://gemini.google.com" target="_blank" rel="noopener noreferrer" class="ai-link-card card-hover"><span class="ai-link-tag">Google</span><span class="block text-lg font-semibold text-white mt-1">Gemini</span><span class="ai-link-host">gemini.google.com</span></a>
+                <a href="https://www.perplexity.ai" target="_blank" rel="noopener noreferrer" class="ai-link-card card-hover"><span class="ai-link-tag">Search</span><span class="block text-lg font-semibold text-white mt-1">Perplexity</span><span class="ai-link-host">perplexity.ai</span></a>
+                <a href="https://huggingface.co" target="_blank" rel="noopener noreferrer" class="ai-link-card card-hover"><span class="ai-link-tag">Models</span><span class="block text-lg font-semibold text-white mt-1">Hugging Face</span><span class="ai-link-host">huggingface.co</span></a>
+                <a href="https://replicate.com" target="_blank" rel="noopener noreferrer" class="ai-link-card card-hover"><span class="ai-link-tag">API</span><span class="block text-lg font-semibold text-white mt-1">Replicate</span><span class="ai-link-host">replicate.com</span></a>
+                <a href="https://platform.openai.com" target="_blank" rel="noopener noreferrer" class="ai-link-card card-hover"><span class="ai-link-tag">API</span><span class="block text-lg font-semibold text-white mt-1">OpenAI Platform</span><span class="ai-link-host">platform.openai.com</span></a>
+                <a href="https://console.anthropic.com" target="_blank" rel="noopener noreferrer" class="ai-link-card card-hover"><span class="ai-link-tag">API</span><span class="block text-lg font-semibold text-white mt-1">Anthropic Console</span><span class="ai-link-host">console.anthropic.com</span></a>
+                <a href="https://cursor.com" target="_blank" rel="noopener noreferrer" class="ai-link-card card-hover"><span class="ai-link-tag">IDE</span><span class="block text-lg font-semibold text-white mt-1">Cursor</span><span class="ai-link-host">cursor.com</span></a>
+                <a href="https://github.com/features/copilot" target="_blank" rel="noopener noreferrer" class="ai-link-card card-hover"><span class="ai-link-tag">GitHub</span><span class="block text-lg font-semibold text-white mt-1">Copilot</span><span class="ai-link-host">github.com/features/copilot</span></a>
+                <a href="https://sdk.vercel.ai/docs" target="_blank" rel="noopener noreferrer" class="ai-link-card card-hover"><span class="ai-link-tag">SDK</span><span class="block text-lg font-semibold text-white mt-1">Vercel AI SDK</span><span class="ai-link-host">sdk.vercel.ai</span></a>
+                <a href="https://smith.langchain.com" target="_blank" rel="noopener noreferrer" class="ai-link-card card-hover"><span class="ai-link-tag">Observability</span><span class="block text-lg font-semibold text-white mt-1">LangSmith</span><span class="ai-link-host">smith.langchain.com</span></a>
+                <a href="https://poe.com" target="_blank" rel="noopener noreferrer" class="ai-link-card card-hover"><span class="ai-link-tag">Multi-model</span><span class="block text-lg font-semibold text-white mt-1">Poe</span><span class="ai-link-host">poe.com</span></a>
+                <a href="https://cohere.com" target="_blank" rel="noopener noreferrer" class="ai-link-card card-hover"><span class="ai-link-tag">API</span><span class="block text-lg font-semibold text-white mt-1">Cohere</span><span class="ai-link-host">cohere.com</span></a>
+                <a href="https://mistral.ai" target="_blank" rel="noopener noreferrer" class="ai-link-card card-hover"><span class="ai-link-tag">API</span><span class="block text-lg font-semibold text-white mt-1">Mistral AI</span><span class="ai-link-host">mistral.ai</span></a>
+                <a href="https://groq.com" target="_blank" rel="noopener noreferrer" class="ai-link-card card-hover"><span class="ai-link-tag">Inference</span><span class="block text-lg font-semibold text-white mt-1">Groq</span><span class="ai-link-host">groq.com</span></a>
+                <a href="https://www.kaggle.com" target="_blank" rel="noopener noreferrer" class="ai-link-card card-hover"><span class="ai-link-tag">Datasets</span><span class="block text-lg font-semibold text-white mt-1">Kaggle</span><span class="ai-link-host">kaggle.com</span></a>
+            </div>
+
+            <div class="mb-3 flex items-center gap-3 text-fuchsia-200/95">
+                <span class="flex h-10 w-10 items-center justify-center rounded-xl bg-fuchsia-500/15 border border-fuchsia-400/30"><i class="fa fa-github text-xl"></i></span>
+                <h3 class="text-xl md:text-2xl font-bold tracking-tight">Famous GitHub projects</h3>
+            </div>
+            <p class="text-sm text-gray-500 mb-6 leading-relaxed">Inference stacks, agent frameworks, diffusion UIs, and SDKs worth bookmarking. Star counts fluctuate — each card links to the project&apos;s GitHub home.</p>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
+                <a href="https://github.com/huggingface/transformers" target="_blank" rel="noopener noreferrer" class="ai-link-card card-hover"><span class="ai-link-tag">NLP</span><span class="block text-lg font-semibold text-white mt-1">transformers</span><span class="ai-link-host">huggingface/transformers</span></a>
+                <a href="https://github.com/langchain-ai/langchain" target="_blank" rel="noopener noreferrer" class="ai-link-card card-hover"><span class="ai-link-tag">Agents</span><span class="block text-lg font-semibold text-white mt-1">LangChain</span><span class="ai-link-host">langchain-ai/langchain</span></a>
+                <a href="https://github.com/ggerganov/llama.cpp" target="_blank" rel="noopener noreferrer" class="ai-link-card card-hover"><span class="ai-link-tag">Inference</span><span class="block text-lg font-semibold text-white mt-1">llama.cpp</span><span class="ai-link-host">ggerganov/llama.cpp</span></a>
+                <a href="https://github.com/ollama/ollama" target="_blank" rel="noopener noreferrer" class="ai-link-card card-hover"><span class="ai-link-tag">Local LLM</span><span class="block text-lg font-semibold text-white mt-1">Ollama</span><span class="ai-link-host">ollama/ollama</span></a>
+                <a href="https://github.com/AUTOMATIC1111/stable-diffusion-webui" target="_blank" rel="noopener noreferrer" class="ai-link-card card-hover"><span class="ai-link-tag">Image</span><span class="block text-lg font-semibold text-white mt-1">Stable Diffusion WebUI</span><span class="ai-link-host">AUTOMATIC1111/…</span></a>
+                <a href="https://github.com/comfyanonymous/ComfyUI" target="_blank" rel="noopener noreferrer" class="ai-link-card card-hover"><span class="ai-link-tag">Image</span><span class="block text-lg font-semibold text-white mt-1">ComfyUI</span><span class="ai-link-host">comfyanonymous/ComfyUI</span></a>
+                <a href="https://github.com/open-webui/open-webui" target="_blank" rel="noopener noreferrer" class="ai-link-card card-hover"><span class="ai-link-tag">UI</span><span class="block text-lg font-semibold text-white mt-1">Open WebUI</span><span class="ai-link-host">open-webui/open-webui</span></a>
+                <a href="https://github.com/vllm-project/vllm" target="_blank" rel="noopener noreferrer" class="ai-link-card card-hover"><span class="ai-link-tag">Serving</span><span class="block text-lg font-semibold text-white mt-1">vLLM</span><span class="ai-link-host">vllm-project/vllm</span></a>
+                <a href="https://github.com/microsoft/autogen" target="_blank" rel="noopener noreferrer" class="ai-link-card card-hover"><span class="ai-link-tag">Agents</span><span class="block text-lg font-semibold text-white mt-1">AutoGen</span><span class="ai-link-host">microsoft/autogen</span></a>
+                <a href="https://github.com/run-llama/llama_index" target="_blank" rel="noopener noreferrer" class="ai-link-card card-hover"><span class="ai-link-tag">RAG</span><span class="block text-lg font-semibold text-white mt-1">LlamaIndex</span><span class="ai-link-host">run-llama/llama_index</span></a>
+                <a href="https://github.com/Significant-Gravitas/AutoGPT" target="_blank" rel="noopener noreferrer" class="ai-link-card card-hover"><span class="ai-link-tag">Agents</span><span class="block text-lg font-semibold text-white mt-1">AutoGPT</span><span class="ai-link-host">Significant-Gravitas/AutoGPT</span></a>
+                <a href="https://github.com/karpathy/nanoGPT" target="_blank" rel="noopener noreferrer" class="ai-link-card card-hover"><span class="ai-link-tag">Learn</span><span class="block text-lg font-semibold text-white mt-1">nanoGPT</span><span class="ai-link-host">karpathy/nanoGPT</span></a>
+                <a href="https://github.com/openai/openai-python" target="_blank" rel="noopener noreferrer" class="ai-link-card card-hover"><span class="ai-link-tag">SDK</span><span class="block text-lg font-semibold text-white mt-1">OpenAI Python</span><span class="ai-link-host">openai/openai-python</span></a>
+                <a href="https://github.com/anthropics/anthropic-sdk-python" target="_blank" rel="noopener noreferrer" class="ai-link-card card-hover"><span class="ai-link-tag">SDK</span><span class="block text-lg font-semibold text-white mt-1">Anthropic Python</span><span class="ai-link-host">anthropics/anthropic-sdk-python</span></a>
+                <a href="https://github.com/ml-explore/mlx" target="_blank" rel="noopener noreferrer" class="ai-link-card card-hover"><span class="ai-link-tag">Apple</span><span class="block text-lg font-semibold text-white mt-1">MLX</span><span class="ai-link-host">ml-explore/mlx</span></a>
+                <a href="https://github.com/Lightning-AI/litgpt" target="_blank" rel="noopener noreferrer" class="ai-link-card card-hover"><span class="ai-link-tag">Train</span><span class="block text-lg font-semibold text-white mt-1">LitGPT</span><span class="ai-link-host">Lightning-AI/litgpt</span></a>
+            </div>
+            <p class="mt-10 text-center text-xs text-gray-500 leading-relaxed">Names and logos belong to their owners. This is an editorial directory, not an endorsement or partnership list.</p>
+        </div>
+    </section>
+
+    <!-- Tools Section -->
+    <section id="tools" class="py-16 bg-dark/50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-4">Browse the tool library</h2>
+            <p class="text-gray-400 text-center max-w-2xl mx-auto mb-12 text-sm md:text-base leading-relaxed">Tap a card to jump straight into that utility on our tools page. Everything runs in the browser where possible — nothing to install.</p>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+                <!-- AI tools -->
+                <a href="tools.html#aitoken" class="block rounded-xl border border-violet-500/35 bg-violet-950/25 p-6 card-hover no-underline text-inherit cursor-pointer ring-1 ring-violet-500/10">
+                    <div class="mb-2 inline-flex rounded-full border border-violet-400/30 bg-violet-500/15 px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wider text-violet-200">AI</div>
+                    <div class="w-12 h-12 rounded-lg bg-gradient-to-br from-violet-500/30 to-fuchsia-500/20 flex items-center justify-center mb-4">
+                        <i class="fa fa-line-chart text-violet-300 text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">AI token estimate</h3>
+                    <p class="text-gray-400 text-sm">Rough token range from pasted prompts — quick sizing before you hit an API.</p>
+                </a>
+                <a href="tools.html#aichat" class="block rounded-xl border border-violet-500/35 bg-violet-950/25 p-6 card-hover no-underline text-inherit cursor-pointer ring-1 ring-violet-500/10">
+                    <div class="mb-2 inline-flex rounded-full border border-violet-400/30 bg-violet-500/15 px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wider text-violet-200">AI</div>
+                    <div class="w-12 h-12 rounded-lg bg-gradient-to-br from-violet-500/30 to-fuchsia-500/20 flex items-center justify-center mb-4">
+                        <i class="fa fa-comments text-violet-300 text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Chat messages JSON</h3>
+                    <p class="text-gray-400 text-sm">Build OpenAI-style <code class="text-violet-300">messages</code> JSON from system + user text.</p>
+                </a>
+                <a href="tools.html#aiprep" class="block rounded-xl border border-violet-500/35 bg-violet-950/25 p-6 card-hover no-underline text-inherit cursor-pointer ring-1 ring-violet-500/10">
+                    <div class="mb-2 inline-flex rounded-full border border-violet-400/30 bg-violet-500/15 px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wider text-violet-200">AI</div>
+                    <div class="w-12 h-12 rounded-lg bg-gradient-to-br from-violet-500/30 to-fuchsia-500/20 flex items-center justify-center mb-4">
+                        <i class="fa fa-magic text-violet-300 text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">LLM paste cleaner</h3>
+                    <p class="text-gray-400 text-sm">Strip zero-width chars and smart quotes — cleaner paste into chat UIs.</p>
+                </a>
+                <a href="tools.html#aifew" class="block rounded-xl border border-violet-500/35 bg-violet-950/25 p-6 card-hover no-underline text-inherit cursor-pointer ring-1 ring-violet-500/10">
+                    <div class="mb-2 inline-flex rounded-full border border-violet-400/30 bg-violet-500/15 px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wider text-violet-200">AI</div>
+                    <div class="w-12 h-12 rounded-lg bg-gradient-to-br from-violet-500/30 to-fuchsia-500/20 flex items-center justify-center mb-4"><i class="fa fa-clone text-violet-300 text-xl"></i></div>
+                    <h3 class="text-xl font-semibold mb-2">Few-shot messages JSON</h3>
+                    <p class="text-gray-400 text-sm">Up to 3 user/assistant pairs → a <code class="text-violet-300">messages</code> array for APIs.</p>
+                </a>
+                <a href="tools.html#aimdplain" class="block rounded-xl border border-violet-500/35 bg-violet-950/25 p-6 card-hover no-underline text-inherit cursor-pointer ring-1 ring-violet-500/10">
+                    <div class="mb-2 inline-flex rounded-full border border-violet-400/30 bg-violet-500/15 px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wider text-violet-200">AI</div>
+                    <div class="w-12 h-12 rounded-lg bg-gradient-to-br from-violet-500/30 to-fuchsia-500/20 flex items-center justify-center mb-4"><i class="fa fa-file-text-o text-violet-300 text-xl"></i></div>
+                    <h3 class="text-xl font-semibold mb-2">Markdown → plain</h3>
+                    <p class="text-gray-400 text-sm">Rough strip of headings, links, emphasis — quick plain text for LLM context.</p>
+                </a>
+                <a href="tools.html#aifence" class="block rounded-xl border border-violet-500/35 bg-violet-950/25 p-6 card-hover no-underline text-inherit cursor-pointer ring-1 ring-violet-500/10">
+                    <div class="mb-2 inline-flex rounded-full border border-violet-400/30 bg-violet-500/15 px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wider text-violet-200">AI</div>
+                    <div class="w-12 h-12 rounded-lg bg-gradient-to-br from-violet-500/30 to-fuchsia-500/20 flex items-center justify-center mb-4"><i class="fa fa-code text-violet-300 text-xl"></i></div>
+                    <h3 class="text-xl font-semibold mb-2">Code fence wrapper</h3>
+                    <p class="text-gray-400 text-sm">Wrap snippets in triple backticks with optional language tag.</p>
+                </a>
+                <a href="tools.html#aifile" class="block rounded-xl border border-violet-500/35 bg-violet-950/25 p-6 card-hover no-underline text-inherit cursor-pointer ring-1 ring-violet-500/10">
+                    <div class="mb-2 inline-flex rounded-full border border-violet-400/30 bg-violet-500/15 px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wider text-violet-200">AI</div>
+                    <div class="w-12 h-12 rounded-lg bg-gradient-to-br from-violet-500/30 to-fuchsia-500/20 flex items-center justify-center mb-4"><i class="fa fa-floppy-o text-violet-300 text-xl"></i></div>
+                    <h3 class="text-xl font-semibold mb-2">Safe filename</h3>
+                    <p class="text-gray-400 text-sm">Turn titles into ASCII-safe filenames for saving model output.</p>
+                </a>
+                <a href="tools.html#aijsonfix" class="block rounded-xl border border-violet-500/35 bg-violet-950/25 p-6 card-hover no-underline text-inherit cursor-pointer ring-1 ring-violet-500/10">
+                    <div class="mb-2 inline-flex rounded-full border border-violet-400/30 bg-violet-500/15 px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wider text-violet-200">AI</div>
+                    <div class="w-12 h-12 rounded-lg bg-gradient-to-br from-violet-500/30 to-fuchsia-500/20 flex items-center justify-center mb-4"><i class="fa fa-wrench text-violet-300 text-xl"></i></div>
+                    <h3 class="text-xl font-semibold mb-2">JSON relax</h3>
+                    <p class="text-gray-400 text-sm">Try <code class="text-violet-300">JSON.parse</code> after fixing trailing commas from model output.</p>
+                </a>
+                <a href="tools.html#aisnip" class="block rounded-xl border border-violet-500/35 bg-violet-950/25 p-6 card-hover no-underline text-inherit cursor-pointer ring-1 ring-violet-500/10">
+                    <div class="mb-2 inline-flex rounded-full border border-violet-400/30 bg-violet-500/15 px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wider text-violet-200">AI</div>
+                    <div class="w-12 h-12 rounded-lg bg-gradient-to-br from-violet-500/30 to-fuchsia-500/20 flex items-center justify-center mb-4"><i class="fa fa-lightbulb-o text-violet-300 text-xl"></i></div>
+                    <h3 class="text-xl font-semibold mb-2">System prompt snippets</h3>
+                    <p class="text-gray-400 text-sm">One-click starter system prompts (translator, reviewer, tutor, …).</p>
+                </a>
+                <a href="tools.html#aicurl" class="block rounded-xl border border-violet-500/35 bg-violet-950/25 p-6 card-hover no-underline text-inherit cursor-pointer ring-1 ring-violet-500/10">
+                    <div class="mb-2 inline-flex rounded-full border border-violet-400/30 bg-violet-500/15 px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wider text-violet-200">AI</div>
+                    <div class="w-12 h-12 rounded-lg bg-gradient-to-br from-violet-500/30 to-fuchsia-500/20 flex items-center justify-center mb-4"><i class="fa fa-terminal text-violet-300 text-xl"></i></div>
+                    <h3 class="text-xl font-semibold mb-2">Chat Completions cURL</h3>
+                    <p class="text-gray-400 text-sm">Paste <code class="text-violet-300">messages</code> JSON → copy a curl example with <code class="text-violet-300">$OPENAI_API_KEY</code>.</p>
+                </a>
+                <a href="tools.html#aiseed" class="block rounded-xl border border-violet-500/35 bg-violet-950/25 p-6 card-hover no-underline text-inherit cursor-pointer ring-1 ring-violet-500/10">
+                    <div class="mb-2 inline-flex rounded-full border border-violet-400/30 bg-violet-500/15 px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wider text-violet-200">AI</div>
+                    <div class="w-12 h-12 rounded-lg bg-gradient-to-br from-violet-500/30 to-fuchsia-500/20 flex items-center justify-center mb-4"><i class="fa fa-random text-violet-300 text-xl"></i></div>
+                    <h3 class="text-xl font-semibold mb-2">Random seed</h3>
+                    <p class="text-gray-400 text-sm">Decimal and hex seeds for reproducible runs in notebooks or CLIs.</p>
+                </a>
+                <a href="tools.html#aitsvmd" class="block rounded-xl border border-violet-500/35 bg-violet-950/25 p-6 card-hover no-underline text-inherit cursor-pointer ring-1 ring-violet-500/10">
+                    <div class="mb-2 inline-flex rounded-full border border-violet-400/30 bg-violet-500/15 px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wider text-violet-200">AI</div>
+                    <div class="w-12 h-12 rounded-lg bg-gradient-to-br from-violet-500/30 to-fuchsia-500/20 flex items-center justify-center mb-4"><i class="fa fa-table text-violet-300 text-xl"></i></div>
+                    <h3 class="text-xl font-semibold mb-2">TSV → Markdown table</h3>
+                    <p class="text-gray-400 text-sm">Turn spreadsheet paste into a GitHub-flavored Markdown table.</p>
+                </a>
+                <a href="tools.html#ailines" class="block rounded-xl border border-violet-500/35 bg-violet-950/25 p-6 card-hover no-underline text-inherit cursor-pointer ring-1 ring-violet-500/10">
+                    <div class="mb-2 inline-flex rounded-full border border-violet-400/30 bg-violet-500/15 px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wider text-violet-200">AI</div>
+                    <div class="w-12 h-12 rounded-lg bg-gradient-to-br from-violet-500/30 to-fuchsia-500/20 flex items-center justify-center mb-4"><i class="fa fa-list-ol text-violet-300 text-xl"></i></div>
+                    <h3 class="text-xl font-semibold mb-2">Listify lines</h3>
+                    <p class="text-gray-400 text-sm">Prefix lines as bullets or numbered lists for clearer prompts.</p>
+                </a>
+                <a href="tools.html#aibug" class="block rounded-xl border border-violet-500/35 bg-violet-950/25 p-6 card-hover no-underline text-inherit cursor-pointer ring-1 ring-violet-500/10">
+                    <div class="mb-2 inline-flex rounded-full border border-violet-400/30 bg-violet-500/15 px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wider text-violet-200">AI</div>
+                    <div class="w-12 h-12 rounded-lg bg-gradient-to-br from-violet-500/30 to-fuchsia-500/20 flex items-center justify-center mb-4"><i class="fa fa-bug text-violet-300 text-xl"></i></div>
+                    <h3 class="text-xl font-semibold mb-2">Error → bug report</h3>
+                    <p class="text-gray-400 text-sm">Turn logs and context into a structured prompt for any chat model.</p>
+                </a>
+                <a href="tools.html#airag" class="block rounded-xl border border-violet-500/35 bg-violet-950/25 p-6 card-hover no-underline text-inherit cursor-pointer ring-1 ring-violet-500/10">
+                    <div class="mb-2 inline-flex rounded-full border border-violet-400/30 bg-violet-500/15 px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wider text-violet-200">AI</div>
+                    <div class="w-12 h-12 rounded-lg bg-gradient-to-br from-violet-500/30 to-fuchsia-500/20 flex items-center justify-center mb-4"><i class="fa fa-book text-violet-300 text-xl"></i></div>
+                    <h3 class="text-xl font-semibold mb-2">RAG reference wrap</h3>
+                    <p class="text-gray-400 text-sm">Wrap long excerpts in <code class="text-violet-300">&lt;reference_material&gt;</code> style tags.</p>
+                </a>
+                <a href="tools.html#aichunk" class="block rounded-xl border border-violet-500/35 bg-violet-950/25 p-6 card-hover no-underline text-inherit cursor-pointer ring-1 ring-violet-500/10">
+                    <div class="mb-2 inline-flex rounded-full border border-violet-400/30 bg-violet-500/15 px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wider text-violet-200">AI</div>
+                    <div class="w-12 h-12 rounded-lg bg-gradient-to-br from-violet-500/30 to-fuchsia-500/20 flex items-center justify-center mb-4"><i class="fa fa-cut text-violet-300 text-xl"></i></div>
+                    <h3 class="text-xl font-semibold mb-2">Long text chunker</h3>
+                    <p class="text-gray-400 text-sm">Split huge context into overlapping chunks for batch or multi-step flows.</p>
+                </a>
+                <a href="tools.html#aicont" class="block rounded-xl border border-violet-500/35 bg-violet-950/25 p-6 card-hover no-underline text-inherit cursor-pointer ring-1 ring-violet-500/10">
+                    <div class="mb-2 inline-flex rounded-full border border-violet-400/30 bg-violet-500/15 px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wider text-violet-200">AI</div>
+                    <div class="w-12 h-12 rounded-lg bg-gradient-to-br from-violet-500/30 to-fuchsia-500/20 flex items-center justify-center mb-4"><i class="fa fa-forward text-violet-300 text-xl"></i></div>
+                    <h3 class="text-xl font-semibold mb-2">Continue-writing prompt</h3>
+                    <p class="text-gray-400 text-sm">Prefix your draft so the model extends instead of restarting.</p>
+                </a>
+                <a href="tools.html#aiformat" class="block rounded-xl border border-violet-500/35 bg-violet-950/25 p-6 card-hover no-underline text-inherit cursor-pointer ring-1 ring-violet-500/10">
+                    <div class="mb-2 inline-flex rounded-full border border-violet-400/30 bg-violet-500/15 px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wider text-violet-200">AI</div>
+                    <div class="w-12 h-12 rounded-lg bg-gradient-to-br from-violet-500/30 to-fuchsia-500/20 flex items-center justify-center mb-4"><i class="fa fa-filter text-violet-300 text-xl"></i></div>
+                    <h3 class="text-xl font-semibold mb-2">Answer-format suffix</h3>
+                    <p class="text-gray-400 text-sm">Append JSON-only, bullets, table, or other output constraints to your task.</p>
+                </a>
+                <!-- Tool 1 -->
+                <a href="tools.html#ip" class="block bg-gray-800/50 rounded-xl p-6 border border-gray-700 card-hover no-underline text-inherit cursor-pointer">
+                    <div class="w-12 h-12 bg-primary/20 rounded-lg flex items-center justify-center mb-4">
+                        <i class="fa fa-wifi text-primary text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">IP Address Lookup</h3>
+                    <p class="text-gray-400 text-sm">Check your public IP address and location details.</p>
+                </a>
+                <!-- Tool 2 -->
+                <a href="tools.html#password" class="block bg-gray-800/50 rounded-xl p-6 border border-gray-700 card-hover no-underline text-inherit cursor-pointer">
+                    <div class="w-12 h-12 bg-primary/20 rounded-lg flex items-center justify-center mb-4">
+                        <i class="fa fa-key text-primary text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Password Generator</h3>
+                    <p class="text-gray-400 text-sm">Create strong, secure random passwords instantly.</p>
+                </a>
+                <!-- Tool 3 -->
+                <a href="tools.html#qrcode" class="block bg-gray-800/50 rounded-xl p-6 border border-gray-700 card-hover no-underline text-inherit cursor-pointer">
+                    <div class="w-12 h-12 bg-primary/20 rounded-lg flex items-center justify-center mb-4">
+                        <i class="fa fa-qrcode text-primary text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">QR Code Generator</h3>
+                    <p class="text-gray-400 text-sm">Generate custom QR codes for URLs, text, and more.</p>
+                </a>
+                <!-- Tool 4 -->
+                <a href="tools.html#json" class="block bg-gray-800/50 rounded-xl p-6 border border-gray-700 card-hover no-underline text-inherit cursor-pointer">
+                    <div class="w-12 h-12 bg-primary/20 rounded-lg flex items-center justify-center mb-4">
+                        <i class="fa fa-code text-primary text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">JSON Formatter</h3>
+                    <p class="text-gray-400 text-sm">Format, validate, and compress JSON data.</p>
+                </a>
+                <!-- Tool 5 -->
+                <a href="tools.html#timestamp" class="block bg-gray-800/50 rounded-xl p-6 border border-gray-700 card-hover no-underline text-inherit cursor-pointer">
+                    <div class="w-12 h-12 bg-primary/20 rounded-lg flex items-center justify-center mb-4">
+                        <i class="fa fa-clock-o text-primary text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Timestamp Converter</h3>
+                    <p class="text-gray-400 text-sm">Convert between Unix timestamp and readable date.</p>
+                </a>
+                <!-- Tool 6 -->
+                <a href="tools.html#textcase" class="block bg-gray-800/50 rounded-xl p-6 border border-gray-700 card-hover no-underline text-inherit cursor-pointer">
+                    <div class="w-12 h-12 bg-primary/20 rounded-lg flex items-center justify-center mb-4">
+                        <i class="fa fa-font text-primary text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Text Case Converter</h3>
+                    <p class="text-gray-400 text-sm">Convert text to uppercase, lowercase, or capitalize.</p>
+                </a>
+                <!-- Tool 7 -->
+                <a href="tools.html#wordcount" class="block bg-gray-800/50 rounded-xl p-6 border border-gray-700 card-hover no-underline text-inherit cursor-pointer">
+                    <div class="w-12 h-12 bg-primary/20 rounded-lg flex items-center justify-center mb-4">
+                        <i class="fa fa-file-text-o text-primary text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Word Counter</h3>
+                    <p class="text-gray-400 text-sm">Count words, characters, and paragraphs in text.</p>
+                </a>
+                <!-- Tool 8 -->
+                <a href="tools.html#color" class="block bg-gray-800/50 rounded-xl p-6 border border-gray-700 card-hover no-underline text-inherit cursor-pointer">
+                    <div class="w-12 h-12 bg-primary/20 rounded-lg flex items-center justify-center mb-4">
+                        <i class="fa fa-paint-brush text-primary text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Color Code Converter</h3>
+                    <p class="text-gray-400 text-sm">Convert between HEX, RGB, and HSL color codes.</p>
+                </a>
+                <!-- Tool 9 -->
+                <a href="tools.html#unit" class="block bg-gray-800/50 rounded-xl p-6 border border-gray-700 card-hover no-underline text-inherit cursor-pointer">
+                    <div class="w-12 h-12 bg-primary/20 rounded-lg flex items-center justify-center mb-4">
+                        <i class="fa fa-ruler text-primary text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Unit Converter</h3>
+                    <p class="text-gray-400 text-sm">Convert length, weight, temperature, and more units.</p>
+                </a>
+                <!-- Tool 10 -->
+                <a href="tools.html#calculator" class="block bg-gray-800/50 rounded-xl p-6 border border-gray-700 card-hover no-underline text-inherit cursor-pointer">
+                    <div class="w-12 h-12 bg-primary/20 rounded-lg flex items-center justify-center mb-4">
+                        <i class="fa fa-calculator text-primary text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Scientific Calculator</h3>
+                    <p class="text-gray-400 text-sm">Advanced online calculator for complex calculations.</p>
+                </a>
+                <!-- Tool 11 -->
+                <a href="tools.html#base64" class="block bg-gray-800/50 rounded-xl p-6 border border-gray-700 card-hover no-underline text-inherit cursor-pointer">
+                    <div class="w-12 h-12 bg-primary/20 rounded-lg flex items-center justify-center mb-4">
+                        <i class="fa fa-image text-primary text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Base64 Image Converter</h3>
+                    <p class="text-gray-400 text-sm">Convert images to Base64 and vice versa.</p>
+                </a>
+                <!-- Tool 12 -->
+                <a href="tools.html#url" class="block bg-gray-800/50 rounded-xl p-6 border border-gray-700 card-hover no-underline text-inherit cursor-pointer">
+                    <div class="w-12 h-12 bg-primary/20 rounded-lg flex items-center justify-center mb-4">
+                        <i class="fa fa-link text-primary text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">URL Encoder/Decoder</h3>
+                    <p class="text-gray-400 text-sm">Encode or decode URLs for safe web transmission.</p>
+                </a>
+                <!-- Tool 13 -->
+                <a href="tools.html#zhcn" class="block bg-gray-800/50 rounded-xl p-6 border border-gray-700 card-hover no-underline text-inherit cursor-pointer">
+                    <div class="w-12 h-12 bg-primary/20 rounded-lg flex items-center justify-center mb-4">
+                        <i class="fa fa-language text-primary text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Traditional/Simplified Converter</h3>
+                    <p class="text-gray-400 text-sm">Convert between traditional and simplified Chinese.</p>
+                </a>
+                <!-- Tool 14 -->
+                <a href="tools.html#textclean" class="block bg-gray-800/50 rounded-xl p-6 border border-gray-700 card-hover no-underline text-inherit cursor-pointer">
+                    <div class="w-12 h-12 bg-primary/20 rounded-lg flex items-center justify-center mb-4">
+                        <i class="fa fa-eraser text-primary text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Text Cleaner</h3>
+                    <p class="text-gray-400 text-sm">Remove extra spaces, line breaks, and clean text.</p>
+                </a>
+                <!-- Tool 15 -->
+                <a href="tools.html#card" class="block bg-gray-800/50 rounded-xl p-6 border border-gray-700 card-hover no-underline text-inherit cursor-pointer">
+                    <div class="w-12 h-12 bg-primary/20 rounded-lg flex items-center justify-center mb-4">
+                        <i class="fa fa-credit-card text-primary text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Card Number Validator</h3>
+                    <p class="text-gray-400 text-sm">Validate credit/debit card numbers using Luhn algorithm.</p>
+                </a>
+                <!-- Tool 16 -->
+                <a href="tools.html#percent" class="block bg-gray-800/50 rounded-xl p-6 border border-gray-700 card-hover no-underline text-inherit cursor-pointer">
+                    <div class="w-12 h-12 bg-primary/20 rounded-lg flex items-center justify-center mb-4">
+                        <i class="fa fa-percent text-primary text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Percentage Calculator</h3>
+                    <p class="text-gray-400 text-sm">Calculate percentages, discounts, and percentage changes.</p>
+                </a>
+                <!-- Tool 17 -->
+                <a href="tools.html#countdown" class="block bg-gray-800/50 rounded-xl p-6 border border-gray-700 card-hover no-underline text-inherit cursor-pointer">
+                    <div class="w-12 h-12 bg-primary/20 rounded-lg flex items-center justify-center mb-4">
+                        <i class="fa fa-hourglass-half text-primary text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Countdown Timer</h3>
+                    <p class="text-gray-400 text-sm">Create fullscreen countdown timers for events.</p>
+                </a>
+                <!-- Tool 18 -->
+                <a href="tools.html#rename" class="block bg-gray-800/50 rounded-xl p-6 border border-gray-700 card-hover no-underline text-inherit cursor-pointer">
+                    <div class="w-12 h-12 bg-primary/20 rounded-lg flex items-center justify-center mb-4">
+                        <i class="fa fa-files-o text-primary text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Bulk File Renamer</h3>
+                    <p class="text-gray-400 text-sm">Rename multiple files at once with custom patterns.</p>
+                </a>
+                <!-- Tool 19 -->
+                <a href="tools.html#hash" class="block bg-gray-800/50 rounded-xl p-6 border border-gray-700 card-hover no-underline text-inherit cursor-pointer">
+                    <div class="w-12 h-12 bg-primary/20 rounded-lg flex items-center justify-center mb-4">
+                        <i class="fa fa-lock text-primary text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">MD5/SHA Hash Generator</h3>
+                    <p class="text-gray-400 text-sm">Generate MD5, SHA-1, SHA-256 hashes for files/text.</p>
+                </a>
+                <!-- Tool 20 -->
+                <a href="tools.html#useragent" class="block bg-gray-800/50 rounded-xl p-6 border border-gray-700 card-hover no-underline text-inherit cursor-pointer">
+                    <div class="w-12 h-12 bg-primary/20 rounded-lg flex items-center justify-center mb-4">
+                        <i class="fa fa-desktop text-primary text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">User-Agent Checker</h3>
+                    <p class="text-gray-400 text-sm">View your browser's User-Agent string and details.</p>
+                </a>
+                <!-- Tool 21 -->
+                <a href="tools.html#uuid" class="block bg-gray-800/50 rounded-xl p-6 border border-gray-700 card-hover no-underline text-inherit cursor-pointer">
+                    <div class="w-12 h-12 bg-primary/20 rounded-lg flex items-center justify-center mb-4">
+                        <i class="fa fa-random text-primary text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">UUID Generator</h3>
+                    <p class="text-gray-400 text-sm">Generate RFC 4122 UUIDs in the browser.</p>
+                </a>
+                <!-- Tool 22 -->
+                <a href="tools.html#random" class="block bg-gray-800/50 rounded-xl p-6 border border-gray-700 card-hover no-underline text-inherit cursor-pointer">
+                    <div class="w-12 h-12 bg-primary/20 rounded-lg flex items-center justify-center mb-4">
+                        <i class="fa fa-sort-numeric-asc text-primary text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Random Number</h3>
+                    <p class="text-gray-400 text-sm">Random integers between a min and max.</p>
+                </a>
+                <!-- Tool 23 -->
+                <a href="tools.html#lorem" class="block bg-gray-800/50 rounded-xl p-6 border border-gray-700 card-hover no-underline text-inherit cursor-pointer">
+                    <div class="w-12 h-12 bg-primary/20 rounded-lg flex items-center justify-center mb-4">
+                        <i class="fa fa-paragraph text-primary text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Lorem Ipsum</h3>
+                    <p class="text-gray-400 text-sm">Placeholder paragraphs for design and testing.</p>
+                </a>
+                <!-- Tool 24 -->
+                <a href="tools.html#b64text" class="block bg-gray-800/50 rounded-xl p-6 border border-gray-700 card-hover no-underline text-inherit cursor-pointer">
+                    <div class="w-12 h-12 bg-primary/20 rounded-lg flex items-center justify-center mb-4">
+                        <i class="fa fa-font text-primary text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Base64 Text</h3>
+                    <p class="text-gray-400 text-sm">Encode or decode UTF-8 text as Base64.</p>
+                </a>
+                <!-- Tool 25 -->
+                <a href="tools.html#hex" class="block bg-gray-800/50 rounded-xl p-6 border border-gray-700 card-hover no-underline text-inherit cursor-pointer">
+                    <div class="w-12 h-12 bg-primary/20 rounded-lg flex items-center justify-center mb-4">
+                        <i class="fa fa-circle-o text-primary text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Hex String</h3>
+                    <p class="text-gray-400 text-sm">Convert UTF-8 text to hex bytes and back.</p>
+                </a>
+                <!-- Tool 26 -->
+                <a href="tools.html#rot13" class="block bg-gray-800/50 rounded-xl p-6 border border-gray-700 card-hover no-underline text-inherit cursor-pointer">
+                    <div class="w-12 h-12 bg-primary/20 rounded-lg flex items-center justify-center mb-4">
+                        <i class="fa fa-exchange text-primary text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">ROT13</h3>
+                    <p class="text-gray-400 text-sm">Classic letter substitution cipher.</p>
+                </a>
+                <!-- Tool 27 -->
+                <a href="tools.html#email" class="block bg-gray-800/50 rounded-xl p-6 border border-gray-700 card-hover no-underline text-inherit cursor-pointer">
+                    <div class="w-12 h-12 bg-primary/20 rounded-lg flex items-center justify-center mb-4">
+                        <i class="fa fa-envelope text-primary text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Email Checker</h3>
+                    <p class="text-gray-400 text-sm">Quick format check for email addresses.</p>
+                </a>
+                <!-- Tool 28 -->
+                <a href="tools.html#regex" class="block bg-gray-800/50 rounded-xl p-6 border border-gray-700 card-hover no-underline text-inherit cursor-pointer">
+                    <div class="w-12 h-12 bg-primary/20 rounded-lg flex items-center justify-center mb-4">
+                        <i class="fa fa-search text-primary text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Regex Tester</h3>
+                    <p class="text-gray-400 text-sm">Test JavaScript RegExp against sample text.</p>
+                </a>
+                <!-- Tool 29 -->
+                <a href="tools.html#sortlines" class="block bg-gray-800/50 rounded-xl p-6 border border-gray-700 card-hover no-underline text-inherit cursor-pointer">
+                    <div class="w-12 h-12 bg-primary/20 rounded-lg flex items-center justify-center mb-4">
+                        <i class="fa fa-sort-alpha-asc text-primary text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Sort Lines</h3>
+                    <p class="text-gray-400 text-sm">Sort lines alphabetically (locale aware).</p>
+                </a>
+                <!-- Tool 30 -->
+                <a href="tools.html#reverse" class="block bg-gray-800/50 rounded-xl p-6 border border-gray-700 card-hover no-underline text-inherit cursor-pointer">
+                    <div class="w-12 h-12 bg-primary/20 rounded-lg flex items-center justify-center mb-4">
+                        <i class="fa fa-undo text-primary text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Reverse Text</h3>
+                    <p class="text-gray-400 text-sm">Reverse the order of characters.</p>
+                </a>
+                <!-- Tool 31 -->
+                <a href="tools.html#dedupe" class="block bg-gray-800/50 rounded-xl p-6 border border-gray-700 card-hover no-underline text-inherit cursor-pointer">
+                    <div class="w-12 h-12 bg-primary/20 rounded-lg flex items-center justify-center mb-4">
+                        <i class="fa fa-filter text-primary text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Dedupe Lines</h3>
+                    <p class="text-gray-400 text-sm">Remove duplicate lines while keeping order.</p>
+                </a>
+                <!-- Tool 32 -->
+                <a href="tools.html#slug" class="block bg-gray-800/50 rounded-xl p-6 border border-gray-700 card-hover no-underline text-inherit cursor-pointer">
+                    <div class="w-12 h-12 bg-primary/20 rounded-lg flex items-center justify-center mb-4">
+                        <i class="fa fa-anchor text-primary text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">URL Slug</h3>
+                    <p class="text-gray-400 text-sm">Turn titles into URL-friendly slugs.</p>
+                </a>
+                <!-- Tool 33 -->
+                <a href="tools.html#htmlent" class="block bg-gray-800/50 rounded-xl p-6 border border-gray-700 card-hover no-underline text-inherit cursor-pointer">
+                    <div class="w-12 h-12 bg-primary/20 rounded-lg flex items-center justify-center mb-4">
+                        <i class="fa fa-html5 text-primary text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">HTML Entities</h3>
+                    <p class="text-gray-400 text-sm">Encode or decode basic HTML entities.</p>
+                </a>
+                <!-- Tool 34 -->
+                <a href="tools.html#jwt" class="block bg-gray-800/50 rounded-xl p-6 border border-gray-700 card-hover no-underline text-inherit cursor-pointer">
+                    <div class="w-12 h-12 bg-primary/20 rounded-lg flex items-center justify-center mb-4">
+                        <i class="fa fa-key text-primary text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">JWT Decoder</h3>
+                    <p class="text-gray-400 text-sm">Decode JWT payload (no signature verification).</p>
+                </a>
+                <!-- Tool 35 -->
+                <a href="tools.html#csvjson" class="block bg-gray-800/50 rounded-xl p-6 border border-gray-700 card-hover no-underline text-inherit cursor-pointer">
+                    <div class="w-12 h-12 bg-primary/20 rounded-lg flex items-center justify-center mb-4">
+                        <i class="fa fa-table text-primary text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">CSV ⇄ JSON</h3>
+                    <p class="text-gray-400 text-sm">Convert simple CSV tables to JSON arrays.</p>
+                </a>
+                <!-- Tool 36 -->
+                <a href="tools.html#radix" class="block bg-gray-800/50 rounded-xl p-6 border border-gray-700 card-hover no-underline text-inherit cursor-pointer">
+                    <div class="w-12 h-12 bg-primary/20 rounded-lg flex items-center justify-center mb-4">
+                        <i class="fa fa-sort-numeric-desc text-primary text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Base Converter</h3>
+                    <p class="text-gray-400 text-sm">Convert numbers between bases 2–36.</p>
+                </a>
+                <!-- Tool 37 -->
+                <a href="tools.html#utf8len" class="block bg-gray-800/50 rounded-xl p-6 border border-gray-700 card-hover no-underline text-inherit cursor-pointer">
+                    <div class="w-12 h-12 bg-primary/20 rounded-lg flex items-center justify-center mb-4">
+                        <i class="fa fa-text-width text-primary text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">UTF-8 Length</h3>
+                    <p class="text-gray-400 text-sm">Count characters and UTF-8 byte length.</p>
+                </a>
+                <!-- Tool 38 -->
+                <a href="tools.html#jescape" class="block bg-gray-800/50 rounded-xl p-6 border border-gray-700 card-hover no-underline text-inherit cursor-pointer">
+                    <div class="w-12 h-12 bg-primary/20 rounded-lg flex items-center justify-center mb-4">
+                        <i class="fa fa-code text-primary text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">JS String Escape</h3>
+                    <p class="text-gray-400 text-sm">Escape strings like JSON.stringify.</p>
+                </a>
+                <!-- Tool 39 -->
+                <a href="tools.html#httpcode" class="block bg-gray-800/50 rounded-xl p-6 border border-gray-700 card-hover no-underline text-inherit cursor-pointer">
+                    <div class="w-12 h-12 bg-primary/20 rounded-lg flex items-center justify-center mb-4">
+                        <i class="fa fa-info-circle text-primary text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">HTTP Status Codes</h3>
+                    <p class="text-gray-400 text-sm">Look up common HTTP status meanings.</p>
+                </a>
+                <!-- Tool 40 -->
+                <a href="tools.html#stopwatch" class="block bg-gray-800/50 rounded-xl p-6 border border-gray-700 card-hover no-underline text-inherit cursor-pointer">
+                    <div class="w-12 h-12 bg-primary/20 rounded-lg flex items-center justify-center mb-4">
+                        <i class="fa fa-play-circle text-primary text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Stopwatch</h3>
+                    <p class="text-gray-400 text-sm">Simple stopwatch with millisecond display.</p>
+                </a>
+                <!-- Tool 41 -->
+                <a href="tools.html#worldtime" class="block bg-gray-800/50 rounded-xl p-6 border border-gray-700 card-hover no-underline text-inherit cursor-pointer">
+                    <div class="w-12 h-12 bg-primary/20 rounded-lg flex items-center justify-center mb-4">
+                        <i class="fa fa-globe text-primary text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">World Clock</h3>
+                    <p class="text-gray-400 text-sm">See current time in major time zones.</p>
+                </a>
+                <!-- Tool 42 -->
+                <a href="tools.html#age" class="block bg-gray-800/50 rounded-xl p-6 border border-gray-700 card-hover no-underline text-inherit cursor-pointer">
+                    <div class="w-12 h-12 bg-primary/20 rounded-lg flex items-center justify-center mb-4">
+                        <i class="fa fa-calendar text-primary text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Age Calculator</h3>
+                    <p class="text-gray-400 text-sm">Approximate age from a birth date.</p>
+                </a>
+                <!-- Tool 43 -->
+                <a href="tools.html#bmi" class="block bg-gray-800/50 rounded-xl p-6 border border-gray-700 card-hover no-underline text-inherit cursor-pointer">
+                    <div class="w-12 h-12 bg-primary/20 rounded-lg flex items-center justify-center mb-4">
+                        <i class="fa fa-heart text-primary text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">BMI Calculator</h3>
+                    <p class="text-gray-400 text-sm">Body mass index from height and weight.</p>
+                </a>
+                <!-- Tool 44 -->
+                <a href="tools.html#tip" class="block bg-gray-800/50 rounded-xl p-6 border border-gray-700 card-hover no-underline text-inherit cursor-pointer">
+                    <div class="w-12 h-12 bg-primary/20 rounded-lg flex items-center justify-center mb-4">
+                        <i class="fa fa-usd text-primary text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Tip Calculator</h3>
+                    <p class="text-gray-400 text-sm">Tip amount, total, and per-person split.</p>
+                </a>
+                <!-- Tool 45 -->
+                <a href="tools.html#loan" class="block bg-gray-800/50 rounded-xl p-6 border border-gray-700 card-hover no-underline text-inherit cursor-pointer">
+                    <div class="w-12 h-12 bg-primary/20 rounded-lg flex items-center justify-center mb-4">
+                        <i class="fa fa-home text-primary text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Loan Estimator</h3>
+                    <p class="text-gray-400 text-sm">Monthly payment estimate (amortizing loan).</p>
+                </a>
+                <!-- Tool 46 -->
+                <a href="tools.html#compound" class="block bg-gray-800/50 rounded-xl p-6 border border-gray-700 card-hover no-underline text-inherit cursor-pointer">
+                    <div class="w-12 h-12 bg-primary/20 rounded-lg flex items-center justify-center mb-4">
+                        <i class="fa fa-line-chart text-primary text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Compound Interest</h3>
+                    <p class="text-gray-400 text-sm">Future value with compound frequency.</p>
+                </a>
+                <!-- Tool 47 -->
+                <a href="tools.html#roman" class="block bg-gray-800/50 rounded-xl p-6 border border-gray-700 card-hover no-underline text-inherit cursor-pointer">
+                    <div class="w-12 h-12 bg-primary/20 rounded-lg flex items-center justify-center mb-4">
+                        <i class="fa fa-bank text-primary text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Roman Numerals</h3>
+                    <p class="text-gray-400 text-sm">Convert between Arabic and Roman numerals.</p>
+                </a>
+                <!-- Tool 48 -->
+                <a href="tools.html#diff" class="block bg-gray-800/50 rounded-xl p-6 border border-gray-700 card-hover no-underline text-inherit cursor-pointer">
+                    <div class="w-12 h-12 bg-primary/20 rounded-lg flex items-center justify-center mb-4">
+                        <i class="fa fa-columns text-primary text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Text Diff</h3>
+                    <p class="text-gray-400 text-sm">Simple line-by-line text comparison.</p>
+                </a>
+                <!-- Tool 49 -->
+                <a href="tools.html#striphtml" class="block bg-gray-800/50 rounded-xl p-6 border border-gray-700 card-hover no-underline text-inherit cursor-pointer">
+                    <div class="w-12 h-12 bg-primary/20 rounded-lg flex items-center justify-center mb-4">
+                        <i class="fa fa-scissors text-primary text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Strip HTML</h3>
+                    <p class="text-gray-400 text-sm">Remove HTML tags from pasted markup.</p>
+                </a>
+                <!-- Tool 50 -->
+                <a href="tools.html#linenum" class="block bg-gray-800/50 rounded-xl p-6 border border-gray-700 card-hover no-underline text-inherit cursor-pointer">
+                    <div class="w-12 h-12 bg-primary/20 rounded-lg flex items-center justify-center mb-4">
+                        <i class="fa fa-list-ol text-primary text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Line Numbers</h3>
+                    <p class="text-gray-400 text-sm">Prefix each line with its line number.</p>
+                </a>
+                <!-- Tool 51 -->
+                <a href="tools.html#randline" class="block bg-gray-800/50 rounded-xl p-6 border border-gray-700 card-hover no-underline text-inherit cursor-pointer">
+                    <div class="w-12 h-12 bg-primary/20 rounded-lg flex items-center justify-center mb-4">
+                        <i class="fa fa-random text-primary text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Random Line</h3>
+                    <p class="text-gray-400 text-sm">Pick one random non-empty line.</p>
+                </a>
+                <!-- Tool 52 -->
+                <a href="tools.html#repeat" class="block bg-gray-800/50 rounded-xl p-6 border border-gray-700 card-hover no-underline text-inherit cursor-pointer">
+                    <div class="w-12 h-12 bg-primary/20 rounded-lg flex items-center justify-center mb-4">
+                        <i class="fa fa-repeat text-primary text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">String Repeat</h3>
+                    <p class="text-gray-400 text-sm">Repeat a string N times (with safety cap).</p>
+                </a>
+                <!-- Tool 53 -->
+                <a href="tools.html#pad" class="block bg-gray-800/50 rounded-xl p-6 border border-gray-700 card-hover no-underline text-inherit cursor-pointer">
+                    <div class="w-12 h-12 bg-primary/20 rounded-lg flex items-center justify-center mb-4">
+                        <i class="fa fa-arrows-h text-primary text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Pad String</h3>
+                    <p class="text-gray-400 text-sm">Left or right pad to a target length.</p>
+                </a>
+                <!-- Tool 54 -->
+                <a href="tools.html#exturl" class="block bg-gray-800/50 rounded-xl p-6 border border-gray-700 card-hover no-underline text-inherit cursor-pointer">
+                    <div class="w-12 h-12 bg-primary/20 rounded-lg flex items-center justify-center mb-4">
+                        <i class="fa fa-external-link text-primary text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Extract URLs</h3>
+                    <p class="text-gray-400 text-sm">Pull http(s) URLs from mixed text.</p>
+                </a>
+                <!-- Tool 55 -->
+                <a href="tools.html#extemail" class="block bg-gray-800/50 rounded-xl p-6 border border-gray-700 card-hover no-underline text-inherit cursor-pointer">
+                    <div class="w-12 h-12 bg-primary/20 rounded-lg flex items-center justify-center mb-4">
+                        <i class="fa fa-at text-primary text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Extract Emails</h3>
+                    <p class="text-gray-400 text-sm">Find email-like patterns in text.</p>
+                </a>
+                <!-- Tool 56 -->
+                <a href="tools.html#metagen" class="block bg-gray-800/50 rounded-xl p-6 border border-gray-700 card-hover no-underline text-inherit cursor-pointer">
+                    <div class="w-12 h-12 bg-primary/20 rounded-lg flex items-center justify-center mb-4">
+                        <i class="fa fa-tags text-primary text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Meta Tag Builder</h3>
+                    <p class="text-gray-400 text-sm">Generate basic title and meta snippets.</p>
+                </a>
+                <!-- Tool 57 -->
+                <a href="tools.html#wordwrap" class="block bg-gray-800/50 rounded-xl p-6 border border-gray-700 card-hover no-underline text-inherit cursor-pointer">
+                    <div class="w-12 h-12 bg-primary/20 rounded-lg flex items-center justify-center mb-4">
+                        <i class="fa fa-align-left text-primary text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Word Wrap</h3>
+                    <p class="text-gray-400 text-sm">Wrap paragraphs to a fixed column width.</p>
+                </a>
+                <!-- Tool 58 -->
+                <a href="tools.html#cronhelp" class="block bg-gray-800/50 rounded-xl p-6 border border-gray-700 card-hover no-underline text-inherit cursor-pointer">
+                    <div class="w-12 h-12 bg-primary/20 rounded-lg flex items-center justify-center mb-4">
+                        <i class="fa fa-clock-o text-primary text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Cron Guide</h3>
+                    <p class="text-gray-400 text-sm">Quick reference for cron field meanings.</p>
+                </a>
+                <!-- Tool 59 -->
+                <a href="tools.html#shades" class="block bg-gray-800/50 rounded-xl p-6 border border-gray-700 card-hover no-underline text-inherit cursor-pointer">
+                    <div class="w-12 h-12 bg-primary/20 rounded-lg flex items-center justify-center mb-4">
+                        <i class="fa fa-tint text-primary text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Color Shades</h3>
+                    <p class="text-gray-400 text-sm">Generate a row of lighter/darker shades.</p>
+                </a>
+                <!-- Tool 60 -->
+                <a href="tools.html#round" class="block bg-gray-800/50 rounded-xl p-6 border border-gray-700 card-hover no-underline text-inherit cursor-pointer">
+                    <div class="w-12 h-12 bg-primary/20 rounded-lg flex items-center justify-center mb-4">
+                        <i class="fa fa-calculator text-primary text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Decimal Rounder</h3>
+                    <p class="text-gray-400 text-sm">Round a number to N decimal places.</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-16">
+        <div class="container mx-auto px-4 max-w-4xl">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-8">About AiToolsHub</h2>
+            <div class="bg-gray-800/30 rounded-xl p-8 border border-gray-700">
+                <p class="text-lg text-gray-300 mb-4 leading-relaxed">
+                    <strong class="text-gray-200">AiToolsHub</strong> is a free collection of <strong class="text-gray-200">100+</strong> small web utilities for developers, students, and anyone who lives in tabs and text fields. The lineup mixes <strong class="text-gray-200">AI-oriented helpers</strong> (tokens, chat JSON, few-shot layouts, bug prompts, RAG-style wraps, chunking, paste cleanup, Markdown &amp; cURL) with solid everyday tools: IP &amp; UUID, QR codes, JSON &amp; CSV, JWT, regex, passwords, hashes, calculators, timestamps, unit conversion, Chinese traditional/simplified, diff and HTML helpers, world clock, and more.
+                </p>
+                <p class="text-gray-400 mb-4 leading-relaxed">
+                    The homepage also includes a curated strip of links to major AI services and well-known open-source repos — handy when you want to open ChatGPT, a vendor console, or a GitHub project without hunting bookmarks.
+                </p>
+                <p class="text-gray-400 mb-6 leading-relaxed">
+                    We run logic in your browser whenever it makes sense, which keeps things snappy and limits what leaves your device. No paywall, no account — use on desktop or phone.
+                </p>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
+                    <div class="p-4">
+                        <div class="text-3xl text-primary mb-2"><i class="fa fa-bolt"></i></div>
+                        <h3 class="font-semibold mb-1">Fast</h3>
+                        <p class="text-sm text-gray-400">All tools load instantly</p>
+                    </div>
+                    <div class="p-4">
+                        <div class="text-3xl text-primary mb-2"><i class="fa fa-shield"></i></div>
+                        <h3 class="font-semibold mb-1">Secure</h3>
+                        <p class="text-sm text-gray-400">Data processed locally</p>
+                    </div>
+                    <div class="p-4">
+                        <div class="text-3xl text-primary mb-2"><i class="fa fa-globe"></i></div>
+                        <h3 class="font-semibold mb-1">Free</h3>
+                        <p class="text-sm text-gray-400">No hidden fees</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    </main>
+
+    <!-- Footer -->
+    <footer id="contact" class="bg-dark border-t border-gray-800 py-8">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-4 md:mb-0 text-center md:text-left">
+                    <a href="/" class="text-xl font-bold bg-gradient-to-r from-primary to-secondary text-gradient">AiToolsHub</a>
+                    <p class="text-gray-400 text-sm mt-1">© 2025 All rights reserved.</p>
+                    <p class="mt-2">
+                        <a href="sitemap.html" class="text-sm text-gray-400 hover:text-primary transition-colors">Sitemap</a>
+                    </p>
+                </div>
+                <div class="flex space-x-4">
+                    <a href="#" class="text-gray-400 hover:text-primary transition-colors">
+                        <i class="fa fa-twitter text-xl"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-primary transition-colors">
+                        <i class="fa fa-github text-xl"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-primary transition-colors">
+                        <i class="fa fa-linkedin text-xl"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                const sel = this.getAttribute('href');
+                if (!sel || sel === '#') return;
+                const el = document.querySelector(sel);
+                if (!el) return;
+                e.preventDefault();
+                el.scrollIntoView({ behavior: 'smooth' });
+            });
+        });
+
+        // Simple mobile menu toggle
+        const menuBtn = document.querySelector('.fa-bars').parentElement;
+        const nav = document.querySelector('nav');
+        menuBtn.addEventListener('click', () => {
+            nav.classList.toggle('hidden');
+            nav.classList.toggle('flex');
+            nav.classList.toggle('flex-col');
+            nav.classList.toggle('w-full');
+            nav.classList.toggle('mt-4');
+        });
+    </script>
+</body>
+</html>
