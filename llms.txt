@@ -4,9 +4,18 @@
 
 ## Main pages
 - [Home](https://ygunoil-ai-tools-hub.vercel.app/)
+- [AI guide — categories & ChatGPT alternatives table](https://ygunoil-ai-tools-hub.vercel.app/directory.html)
 - [Tool hub — all utilities](https://ygunoil-ai-tools-hub.vercel.app/tools.html)
 - [HTML sitemap (all anchors)](https://ygunoil-ai-tools-hub.vercel.app/sitemap.html)
 - [Privacy policy](https://ygunoil-ai-tools-hub.vercel.app/privacy.html)
+
+## Editorial AI reviews (structured comparisons)
+- [Best AI essay writing tools free](https://ygunoil-ai-tools-hub.vercel.app/reviews/best-ai-essay-writing-tools-free.html)
+- [AI PPT generator without login](https://ygunoil-ai-tools-hub.vercel.app/reviews/ai-ppt-generator-without-login.html)
+- [Free ChatGPT alternatives no sign up](https://ygunoil-ai-tools-hub.vercel.app/reviews/free-chatgpt-alternatives-no-sign-up.html)
+- [AI video generator for TikTok](https://ygunoil-ai-tools-hub.vercel.app/reviews/ai-video-generator-for-tiktok.html)
+- [AI logo maker free unlimited](https://ygunoil-ai-tools-hub.vercel.app/reviews/ai-logo-maker-free-unlimited.html)
+- [Best AI code assistant for developers](https://ygunoil-ai-tools-hub.vercel.app/reviews/best-ai-code-assistant-for-developers.html)
 
 ## Machine-readable sitemap
 - [sitemap.xml](https://ygunoil-ai-tools-hub.vercel.app/sitemap.xml)
