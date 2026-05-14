@@ -3,28 +3,140 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Privacy Policy - AiToolsHub</title>
+    <title>Privacy Policy — AiToolsHub</title>
+    <link rel="sitemap" type="application/xml" title="Sitemap" href="https://ygunoil-ai-tools-hub.vercel.app/sitemap.xml">
+    <meta name="description" content="How AiToolsHub handles cookies, ads, and data. Browser-first tools; links to the home FAQ and tool hub.">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#020617">
+    <style>
+        @media (prefers-reduced-motion: no-preference) {
+            html { scroll-behavior: smooth; }
+        }
+        * { box-sizing: border-box; }
+        body {
+            margin: 0;
+            min-height: 100vh;
+            font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+            line-height: 1.65;
+            color: #e2e8f0;
+            background: #020617;
+            padding: 1.5rem 1.25rem 3rem;
+        }
+        #read-progress {
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 100;
+            height: 3px;
+            width: 0%;
+            background: linear-gradient(90deg, #6366f1, #ec4899);
+            pointer-events: none;
+            transition: width 0.15s ease-out;
+        }
+        .wrap { max-width: 44rem; margin: 0 auto; }
+        nav {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem 1rem;
+            align-items: center;
+            padding-bottom: 1rem;
+            margin-bottom: 1.25rem;
+            border-bottom: 1px solid rgba(148, 163, 184, 0.2);
+            font-size: 0.9rem;
+        }
+        nav a {
+            color: #a5b4fc;
+            text-decoration: none;
+        }
+        nav a:hover { text-decoration: underline; color: #c7d2fe; }
+        .toc {
+            font-size: 0.875rem;
+            color: #94a3b8;
+            margin-bottom: 1.5rem;
+            padding: 0.75rem 1rem;
+            border-radius: 0.5rem;
+            border: 1px solid rgba(71, 85, 105, 0.6);
+            background: rgba(15, 23, 42, 0.6);
+        }
+        .toc a { color: #818cf8; }
+        .toc a:hover { color: #a5b4fc; }
+        h1 { font-size: 1.75rem; margin: 0 0 0.5rem; color: #f8fafc; }
+        .meta { color: #94a3b8; font-size: 0.875rem; margin-bottom: 1.5rem; }
+        h2 {
+            font-size: 1.15rem;
+            margin: 2rem 0 0.75rem;
+            color: #f1f5f9;
+            scroll-margin-top: 1rem;
+        }
+        p { margin: 0 0 1rem; color: #cbd5e1; }
+        .hint {
+            margin-top: 2rem;
+            padding: 1rem;
+            border-radius: 0.5rem;
+            border: 1px solid rgba(99, 102, 241, 0.35);
+            background: rgba(30, 27, 75, 0.35);
+            font-size: 0.9rem;
+            color: #cbd5e1;
+        }
+        .hint a { color: #a5b4fc; }
+    </style>
 </head>
-<body style="max-width: 900px; margin: 40px auto; padding: 0 20px; font-family: Arial, sans-serif; line-height: 1.6;">
+<body>
+    <div id="read-progress" aria-hidden="true"></div>
+    <div class="wrap">
+        <nav aria-label="Site">
+            <a href="index.html">Home</a>
+            <a href="tools.html">Tool hub</a>
+            <a href="sitemap.html">Sitemap</a>
+            <a href="index.html#faq">FAQ</a>
+        </nav>
 
-    <h1>Privacy Policy</h1>
-    <p>Last updated: 2025</p>
+        <p class="toc" id="toc">
+            On this page:
+            <a href="#collect">Information we collect</a> ·
+            <a href="#cookies">Cookies &amp; advertising</a> ·
+            <a href="#third">Third-party services</a> ·
+            <a href="#security">Data security</a> ·
+            <a href="#contact">Contact</a>
+        </p>
 
-    <h2>1. Information We Collect</h2>
-    <p>We do not collect personal information such as your name, email, or location. We only collect non-personal data for website functionality and ads.</p>
+        <h1>Privacy Policy</h1>
+        <p class="meta">Last updated: January 2026</p>
 
-    <h2>2. Cookies & Advertising</h2>
-    <p>We use Google AdSense to serve ads. Google may use cookies to serve personalized ads based on your visits to this and other websites.</p>
-    <p>You can choose to disable cookies in your browser settings.</p>
+        <h2 id="collect">1. Information we collect</h2>
+        <p>We do not ask you to create an account and we do not collect personal identifiers such as your name, email address, or precise location for profiling. Non-personal technical data may be processed by your browser and by standard web infrastructure (for example server logs on the host you use to reach the site).</p>
 
-    <h2>3. Third-Party Services</h2>
-    <p>Google AdSense operates under their own privacy policies. We recommend reviewing Google's privacy policy for more details.</p>
+        <h2 id="cookies">2. Cookies &amp; advertising</h2>
+        <p>We use Google AdSense to help fund hosting. Google may use cookies or similar technologies to measure ad delivery and, where allowed, to personalize ads based on this site and others you visit. You can control cookies through your browser settings and industry opt-out tools offered by ad networks.</p>
 
-    <h2>4. Data Security</h2>
-    <p>We take reasonable steps to protect your data, but no method of transmission over the internet is 100% secure.</p>
+        <h2 id="third">3. Third-party services</h2>
+        <p>AdSense and other embedded scripts operate under their own policies. When you use our <a href="tools.html">browser tools</a>, most processing happens locally; a small number of utilities may call external APIs when necessary for the feature (for example a public IP lookup). Those panels describe the behavior on the tool page.</p>
 
-    <h2>5. Contact Us</h2>
-    <p>If you have any questions about this Privacy Policy, you can contact us via our website.</p>
+        <h2 id="security">4. Data security</h2>
+        <p>We take reasonable care with configuration and updates, but no web transmission or storage is perfectly secure. Do not paste highly sensitive secrets into any online form unless you understand the risk.</p>
 
+        <h2 id="contact">5. Contact</h2>
+        <p>If you publish a contact email or form on your deployment, use that channel for questions about this policy.</p>
+
+        <div class="hint">
+            Looking for how tools treat your text? See the expandable <strong>Quick answers</strong> on the <a href="index.html#faq">home FAQ</a>.
+        </div>
+    </div>
+    <script>
+        (function () {
+            var bar = document.getElementById('read-progress');
+            function onScroll() {
+                if (!bar) return;
+                var doc = document.documentElement;
+                var st = doc.scrollTop || document.body.scrollTop;
+                var h = (doc.scrollHeight || document.body.scrollHeight) - doc.clientHeight;
+                var p = h > 0 ? Math.min(100, Math.round((st / h) * 10000) / 100) : 0;
+                bar.style.width = p + '%';
+            }
+            window.addEventListener('scroll', onScroll, { passive: true });
+            window.addEventListener('resize', onScroll);
+            onScroll();
+        })();
+    </script>
 </body>
 </html>

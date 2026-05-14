@@ -14,7 +14,7 @@
     </script>
     <script src="https://fundingchoicesmessages.google.com/i/pub-2809928683583930?ers=1" async></script>
 
-    <!-- 第2位：才是你的AdSense广告代码 -->
+    <!-- AdSense: keep after consent stub -->
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2809928683583930" crossorigin="anonymous"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -23,6 +23,7 @@
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
     <meta name="theme-color" content="#020617">
     <link rel="canonical" href="https://ygunoil-ai-tools-hub.vercel.app/sitemap.html">
+    <link rel="sitemap" type="application/xml" title="Sitemap" href="https://ygunoil-ai-tools-hub.vercel.app/sitemap.xml">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="AiToolsHub">
     <meta property="og:url" content="https://ygunoil-ai-tools-hub.vercel.app/sitemap.html">
@@ -210,11 +211,31 @@
             border-top: 1px solid rgba(255, 255, 255, 0.06);
             background: linear-gradient(180deg, transparent, rgba(15, 23, 42, 0.5));
         }
+        @media (prefers-reduced-motion: no-preference) {
+            html { scroll-behavior: smooth; }
+        }
+        #read-progress {
+            width: 0%;
+            will-change: width;
+        }
+        #smap-faq {
+            scroll-margin-top: 5rem;
+        }
+        #smap-faq details > summary {
+            list-style: none;
+        }
+        #smap-faq details > summary::-webkit-details-marker {
+            display: none;
+        }
+        #smap-faq details[open] > summary {
+            color: rgb(196 181 253);
+        }
     </style>
 </head>
 <body class="sitemap-page-body bg-[#020617] text-gray-200 min-h-screen font-sans antialiased selection:bg-primary/30 selection:text-white">
     <div class="sitemap-ambient" aria-hidden="true"></div>
-    <header class="smap-header sticky top-0 z-50">
+    <header class="smap-header sticky top-0 z-50 relative">
+        <div id="read-progress" class="absolute bottom-0 left-0 z-[60] h-0.5 w-full bg-gradient-to-r from-indigo-500 to-fuchsia-500 pointer-events-none transition-[width] duration-150 ease-out" style="width:0%" aria-hidden="true"></div>
         <div class="container relative z-[1] mx-auto flex flex-wrap items-center justify-between gap-4 px-4 py-4">
             <a href="index.html" class="text-xl font-bold tracking-tight">
                 <span class="bg-gradient-to-r from-indigo-300 via-violet-300 to-fuchsia-300 bg-clip-text text-transparent">
@@ -225,6 +246,8 @@
                 <a href="index.html" class="smap-nav-link">Home</a>
                 <a href="index.html#tools" class="smap-nav-link">Tools</a>
                 <a href="index.html#about" class="smap-nav-link">About</a>
+                <a href="index.html#faq" class="smap-nav-link">FAQ</a>
+                <a href="privacy.html" class="smap-nav-link">Privacy</a>
                 <a href="tools.html" class="smap-nav-link">Tool hub</a>
                 <span class="smap-nav-link smap-nav-current cursor-default">Sitemap</span>
             </nav>
@@ -239,6 +262,14 @@
             XML sitemap for crawlers:
             <a href="https://ygunoil-ai-tools-hub.vercel.app/sitemap.xml" class="smap-xml-chip"><i class="fa fa-code text-xs opacity-80"></i> sitemap.xml</a>
         </p>
+        <p class="mb-6 text-sm text-slate-500">
+            Quick jump:
+            <a href="index.html#tools" class="text-indigo-300 hover:underline">Home — tools</a>
+            <span class="mx-1 text-slate-600" aria-hidden="true">·</span>
+            <a href="index.html#faq" class="text-fuchsia-300/90 hover:underline">Home — FAQ</a>
+            <span class="mx-1 text-slate-600" aria-hidden="true">·</span>
+            <a href="#smap-faq" class="text-cyan-300/90 hover:underline">This page — FAQ</a>
+        </p>
 
         <section class="smap-card mb-10 p-6 md:p-8">
             <h2 class="mb-5 flex items-center gap-3 text-xl font-semibold text-white">
@@ -248,9 +279,11 @@
             <ul class="smap-list space-y-2 text-gray-300">
                 <li><a href="index.html">Home</a> <span class="text-slate-500">index.html</span></li>
                 <li><a href="index.html#tools">Tools section (anchor)</a></li>
+                <li><a href="index.html#faq">FAQ (anchor)</a></li>
                 <li><a href="index.html#about">About (anchor)</a></li>
                 <li><a href="tools.html">Tool hub (all tools)</a> <span class="text-slate-500">tools.html</span></li>
-                <li><span class="text-slate-400">Sitemap (this page)</span> <span class="text-slate-500">sitemap.html</span></li>
+                <li><a href="sitemap.html">HTML sitemap</a> <span class="text-slate-500">sitemap.html</span></li>
+                <li><a href="privacy.html">Privacy policy</a> <span class="text-slate-500">privacy.html</span></li>
             </ul>
         </section>
 
@@ -260,7 +293,22 @@
                 <span class="smap-card-title-text">Online tools (100+)</span>
             </h2>
             <p class="mb-5 text-sm text-slate-400">Each link opens the matching panel in <code class="rounded-md border border-white/10 bg-slate-950/60 px-2 py-0.5 font-mono text-xs text-indigo-300">tools.html</code>.</p>
-            <ul class="grid gap-2 sm:grid-cols-2">
+
+            <div class="mb-6 max-w-2xl space-y-3" aria-label="Find a tool on this list">
+                <label for="smap-search" class="sr-only">Search tools</label>
+                <input type="search" id="smap-search" autocomplete="off" spellcheck="false" placeholder="Search by tool name…" class="w-full rounded-lg border border-slate-600 bg-slate-900/80 px-3 py-2.5 text-sm text-slate-100 placeholder:text-slate-500 focus:border-indigo-500 focus:outline-none focus:ring-2 focus:ring-indigo-500/30">
+                <div class="flex flex-wrap gap-2" role="group" aria-label="Filter">
+                    <button type="button" class="smap-filter-btn rounded-lg border border-indigo-500 bg-indigo-500/25 px-3 py-1.5 text-xs font-semibold text-white" data-smap-filter="all">All</button>
+                    <button type="button" class="smap-filter-btn rounded-lg border border-slate-600 bg-slate-800/70 px-3 py-1.5 text-xs font-semibold text-slate-300 hover:border-violet-500/40" data-smap-filter="ai">AI helpers</button>
+                    <button type="button" class="smap-filter-btn rounded-lg border border-slate-600 bg-slate-800/70 px-3 py-1.5 text-xs font-semibold text-slate-300 hover:border-indigo-500/40" data-smap-filter="other">More tools</button>
+                </div>
+                <button type="button" id="smap-surprise" class="inline-flex items-center gap-2 rounded-lg border border-fuchsia-500/35 bg-fuchsia-950/25 px-4 py-2 text-sm font-semibold text-fuchsia-100 transition hover:border-fuchsia-400/50 hover:bg-fuchsia-900/30">
+                    <i class="fa fa-random" aria-hidden="true"></i> Surprise me
+                </button>
+                <p id="smap-meta" class="text-xs text-slate-500" aria-live="polite"></p>
+            </div>
+
+            <ul id="smap-tool-list" class="grid gap-2 sm:grid-cols-2">
                 <li><a href="tools.html#aitoken" class="smap-tool-link">AI Token Estimate (rough)</a></li>
                 <li><a href="tools.html#aichat" class="smap-tool-link">Chat Messages JSON</a></li>
                 <li><a href="tools.html#aiprep" class="smap-tool-link">LLM Paste Cleaner</a></li>
@@ -341,6 +389,28 @@
                 <li><a href="tools.html#round" class="smap-tool-link">Decimal Rounder</a></li>
             </ul>
         </section>
+
+        <section id="smap-faq" class="smap-card mb-10 p-6 md:p-8">
+            <h2 class="mb-4 flex items-center gap-3 text-xl font-semibold text-white">
+                <span class="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg border border-cyan-500/30 bg-cyan-500/10 text-cyan-300"><i class="fa fa-question-circle"></i></span>
+                <span class="smap-card-title-text">Quick answers</span>
+            </h2>
+            <p class="mb-5 text-sm text-slate-400">Short questions people ask before clicking through — expand any row.</p>
+            <div class="space-y-2">
+                <details class="rounded-lg border border-slate-700 bg-slate-900/50 px-3 py-2 open:border-indigo-500/35">
+                    <summary class="cursor-pointer select-none text-sm font-semibold text-slate-100 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500/60 rounded">What is the difference between this page and tools.html?</summary>
+                    <p class="mt-2 border-t border-slate-700/80 pt-2 text-xs text-slate-400 leading-relaxed">This sitemap is a <strong class="text-slate-300">browseable index</strong> of every anchor. <a href="tools.html" class="text-indigo-300 hover:underline">tools.html</a> is where each utility actually runs.</p>
+                </details>
+                <details class="rounded-lg border border-slate-700 bg-slate-900/50 px-3 py-2 open:border-indigo-500/35">
+                    <summary class="cursor-pointer select-none text-sm font-semibold text-slate-100 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500/60 rounded">How do I search faster on a long list?</summary>
+                    <p class="mt-2 border-t border-slate-700/80 pt-2 text-xs text-slate-400 leading-relaxed">Use the search box and chips above the grid, or <strong class="text-slate-300">Surprise me</strong> to open a random tool in a new logical hop.</p>
+                </details>
+                <details class="rounded-lg border border-slate-700 bg-slate-900/50 px-3 py-2 open:border-indigo-500/35">
+                    <summary class="cursor-pointer select-none text-sm font-semibold text-slate-100 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500/60 rounded">Where is the machine-readable sitemap?</summary>
+                    <p class="mt-2 border-t border-slate-700/80 pt-2 text-xs text-slate-400 leading-relaxed">Use <a href="https://ygunoil-ai-tools-hub.vercel.app/sitemap.xml" class="text-indigo-300 hover:underline">sitemap.xml</a> for crawlers; this HTML page is for humans.</p>
+                </details>
+            </div>
+        </section>
     </main>
 
     <footer class="smap-footer relative z-[1] py-10 text-center text-sm text-slate-500">
@@ -348,5 +418,91 @@
             <i class="fa fa-arrow-left text-xs"></i> Back to home
         </a>
     </footer>
+    <script>
+        (function () {
+            var bar = document.getElementById('read-progress');
+            function onScroll() {
+                if (!bar) return;
+                var doc = document.documentElement;
+                var st = doc.scrollTop || document.body.scrollTop;
+                var h = (doc.scrollHeight || document.body.scrollHeight) - doc.clientHeight;
+                var p = h > 0 ? Math.min(100, Math.round((st / h) * 10000) / 100) : 0;
+                bar.style.width = p + '%';
+            }
+            if (bar) {
+                window.addEventListener('scroll', onScroll, { passive: true });
+                window.addEventListener('resize', onScroll);
+                onScroll();
+            }
+
+            var list = document.getElementById('smap-tool-list');
+            var input = document.getElementById('smap-search');
+            var meta = document.getElementById('smap-meta');
+            var surprise = document.getElementById('smap-surprise');
+            var filterBtns = document.querySelectorAll('.smap-filter-btn');
+            if (!list || !input) return;
+
+            var items = Array.prototype.slice.call(list.querySelectorAll('li'));
+            var total = items.length;
+            var active = 'all';
+
+            function isAi(href) {
+                return (href || '').indexOf('#ai') !== -1;
+            }
+            function rowText(li) {
+                return (li.textContent || '').replace(/\s+/g, ' ').trim().toLowerCase();
+            }
+            function setBtns(next) {
+                active = next;
+                filterBtns.forEach(function (btn) {
+                    var f = btn.getAttribute('data-smap-filter');
+                    var on = f === next;
+                    btn.classList.toggle('border-indigo-500', on);
+                    btn.classList.toggle('bg-indigo-500/25', on);
+                    btn.classList.toggle('text-white', on);
+                    btn.classList.toggle('border-slate-600', !on);
+                    btn.classList.toggle('bg-slate-800/70', !on);
+                    btn.classList.toggle('text-slate-300', !on);
+                });
+            }
+            function apply() {
+                var q = (input.value || '').trim().toLowerCase();
+                var shown = 0;
+                items.forEach(function (li) {
+                    var a = li.querySelector('a[href^="tools.html#"]');
+                    var href = a ? a.getAttribute('href') : '';
+                    var ai = isAi(href);
+                    var catOk = active === 'all' || (active === 'ai' && ai) || (active === 'other' && !ai);
+                    var textOk = !q || rowText(li).indexOf(q) !== -1;
+                    var vis = catOk && textOk;
+                    li.classList.toggle('hidden', !vis);
+                    if (vis) shown++;
+                });
+                if (meta) {
+                    meta.textContent = shown === total && !q && active === 'all'
+                        ? total + ' links — search or try Surprise me.'
+                        : 'Showing ' + shown + ' of ' + total + ' links.';
+                }
+            }
+            input.addEventListener('input', apply);
+            filterBtns.forEach(function (btn) {
+                btn.addEventListener('click', function () {
+                    setBtns(btn.getAttribute('data-smap-filter') || 'all');
+                    apply();
+                });
+            });
+            if (surprise) {
+                surprise.addEventListener('click', function () {
+                    var pool = items.filter(function (li) { return !li.classList.contains('hidden'); });
+                    if (!pool.length) return;
+                    var li = pool[Math.floor(Math.random() * pool.length)];
+                    var a = li.querySelector('a');
+                    if (a && a.href) window.location.href = a.href;
+                });
+            }
+            setBtns('all');
+            apply();
+        })();
+    </script>
 </body>
 </html>

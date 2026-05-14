@@ -1,0 +1,18 @@
+# AiToolsHub
+
+> 100+ free browser tools for developers — LLM helpers, JSON/JWT/CSV, IP & UUID, QR, regex, hashes, calculators, and text utilities. No account; runs locally when possible.
+
+## Main pages
+- [Home](https://ygunoil-ai-tools-hub.vercel.app/)
+- [Tool hub — all utilities](https://ygunoil-ai-tools-hub.vercel.app/tools.html)
+- [HTML sitemap (all anchors)](https://ygunoil-ai-tools-hub.vercel.app/sitemap.html)
+- [Privacy policy](https://ygunoil-ai-tools-hub.vercel.app/privacy.html)
+
+## Machine-readable sitemap
+- [sitemap.xml](https://ygunoil-ai-tools-hub.vercel.app/sitemap.xml)
+
+## Typical entry points
+- [AI token estimate](https://ygunoil-ai-tools-hub.vercel.app/tools.html#aitoken)
+- [JSON formatter](https://ygunoil-ai-tools-hub.vercel.app/tools.html#json)
+- [JWT decode](https://ygunoil-ai-tools-hub.vercel.app/tools.html#jwt)
+- [IP lookup](https://ygunoil-ai-tools-hub.vercel.app/tools.html#ip)

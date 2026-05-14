@@ -14,7 +14,7 @@
     </script>
     <script src="https://fundingchoicesmessages.google.com/i/pub-2809928683583930?ers=1" async></script>
 
-    <!-- 第2位：才是你的AdSense广告代码 -->
+    <!-- AdSense: keep after consent stub -->
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2809928683583930" crossorigin="anonymous"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -25,6 +25,7 @@
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
     <meta name="theme-color" content="#020617">
     <link rel="canonical" href="https://ygunoil-ai-tools-hub.vercel.app/tools.html">
+    <link rel="sitemap" type="application/xml" title="Sitemap" href="https://ygunoil-ai-tools-hub.vercel.app/sitemap.xml">
     <link rel="alternate" hreflang="en" href="https://ygunoil-ai-tools-hub.vercel.app/tools.html">
     <link rel="alternate" hreflang="x-default" href="https://ygunoil-ai-tools-hub.vercel.app/tools.html">
     <meta property="og:type" content="website">
@@ -241,9 +242,18 @@
                 filter: brightness(1.06);
             }
         }
+
+        @media (prefers-reduced-motion: no-preference) {
+            html { scroll-behavior: smooth; }
+        }
+        #read-progress {
+            width: 0%;
+            will-change: width;
+        }
     </style>
 </head>
 <body class="tools-page-body bg-[#020617] text-gray-200 min-h-screen font-sans antialiased selection:bg-primary/30 selection:text-white">
+    <div id="read-progress" class="fixed top-0 left-0 z-[100] h-0.5 w-full bg-gradient-to-r from-primary to-secondary pointer-events-none transition-[width] duration-150 ease-out" style="width:0%" aria-hidden="true"></div>
     <div class="tools-ambient" aria-hidden="true"></div>
     <div class="relative z-[1] flex min-h-screen flex-col md:flex-row">
         <aside class="flex w-full shrink-0 flex-col border-b border-white/5 bg-slate-900/55 p-3 shadow-[0_0_60px_-15px_rgba(99,102,241,0.12)] backdrop-blur-xl md:sticky md:top-0 md:h-screen md:max-h-screen md:w-[min(100%,22rem)] md:border-b-0 md:border-r md:border-white/5 lg:w-[min(100%,28rem)]">
@@ -254,11 +264,27 @@
                 <a href="sitemap.html" class="inline-flex items-center gap-2 rounded-lg px-2 py-1.5 text-slate-400 transition hover:bg-white/5 hover:text-fuchsia-300">
                     <i class="fa fa-sitemap text-fuchsia-400/80"></i> Sitemap
                 </a>
+                <a href="privacy.html" class="inline-flex items-center gap-2 rounded-lg px-2 py-1.5 text-slate-400 transition hover:bg-white/5 hover:text-slate-200">
+                    <i class="fa fa-shield text-slate-400/80"></i> Privacy
+                </a>
+            </div>
+            <div class="mb-2 shrink-0 space-y-2 rounded-xl border border-white/5 bg-slate-950/40 p-2.5" aria-label="Find a tool in the sidebar">
+                <label for="tool-nav-search" class="sr-only">Search tools in the list</label>
+                <input type="search" id="tool-nav-search" autocomplete="off" spellcheck="false" placeholder="Filter list…" class="w-full rounded-lg border border-slate-600 bg-slate-900/90 px-2.5 py-1.5 text-xs text-slate-100 placeholder:text-slate-500 focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary/40">
+                <div class="flex flex-wrap gap-1" role="group" aria-label="Category">
+                    <button type="button" class="tool-nav-filter rounded border border-primary bg-primary/25 px-2 py-1 text-[10px] font-semibold uppercase tracking-wide text-white" data-tool-nav-filter="all">All</button>
+                    <button type="button" class="tool-nav-filter rounded border border-slate-600 bg-slate-800/80 px-2 py-1 text-[10px] font-semibold uppercase tracking-wide text-slate-300 hover:border-violet-500/40" data-tool-nav-filter="ai">AI</button>
+                    <button type="button" class="tool-nav-filter rounded border border-slate-600 bg-slate-800/80 px-2 py-1 text-[10px] font-semibold uppercase tracking-wide text-slate-300 hover:border-primary/40" data-tool-nav-filter="other">More</button>
+                </div>
+                <button type="button" id="tool-nav-surprise" class="w-full rounded-lg border border-fuchsia-500/35 bg-fuchsia-950/20 py-1.5 text-xs font-semibold text-fuchsia-100 transition hover:border-fuchsia-400/50 hover:bg-fuchsia-900/30">
+                    <i class="fa fa-random mr-1.5" aria-hidden="true"></i> Surprise me
+                </button>
+                <p id="tool-nav-meta" class="text-center text-[10px] leading-tight text-slate-500" aria-live="polite"></p>
             </div>
             <p class="mb-1.5 shrink-0 px-0.5 text-[10px] font-semibold uppercase tracking-[0.2em] text-slate-500">Tools</p>
             <nav id="nav" class="nav-tool-grid min-h-0 flex-1 gap-x-2 gap-y-1 overflow-y-auto overscroll-contain pb-2"></nav>
         </aside>
-        <main class="relative z-[2] flex-1 overflow-auto p-4 md:p-8 md:pl-10">
+        <main id="tool-main" class="relative z-[2] flex-1 overflow-auto p-4 md:p-8 md:pl-10">
             <div id="msg" class="tools-msg-banner hidden mb-5 px-4 py-2.5 text-amber-100 text-sm"></div>
 
             <!-- AI helpers -->
@@ -774,6 +800,8 @@
             { id: 'useragent', label: 'User-Agent' }
         ].concat(window.__TOOLS_NAV_EXTRA || []);
 
+        const DEFAULT_DOCUMENT_TITLE = document.title;
+
         function showMsg(t) {
             const el = document.getElementById('msg');
             el.textContent = t;
@@ -876,6 +904,10 @@
             });
             if (location.hash.slice(1).toLowerCase() !== h) location.replace('#' + h);
             initTool(h);
+            const tm = document.getElementById('tool-main');
+            if (tm) tm.scrollTop = 0;
+            const navEntry = NAV.find(n => n.id === h);
+            document.title = navEntry ? (navEntry.label + ' — Free online tool | AiToolsHub') : DEFAULT_DOCUMENT_TITLE;
         }
 
         const inited = {};
@@ -1686,6 +1718,99 @@
             a.addEventListener('click', e => { e.preventDefault(); location.hash = id; });
             nav.appendChild(a);
         });
+
+        (function initToolNavDiscover() {
+            const bar = document.getElementById('read-progress');
+            const mainEl = document.getElementById('tool-main');
+            function onScrollProgress() {
+                if (!bar) return;
+                let st = 0;
+                let h = 0;
+                if (mainEl && mainEl.scrollHeight > mainEl.clientHeight) {
+                    st = mainEl.scrollTop;
+                    h = mainEl.scrollHeight - mainEl.clientHeight;
+                } else {
+                    const doc = document.documentElement;
+                    st = doc.scrollTop || document.body.scrollTop;
+                    h = (doc.scrollHeight || document.body.scrollHeight) - doc.clientHeight;
+                }
+                const p = h > 0 ? Math.min(100, Math.round((st / h) * 10000) / 100) : 0;
+                bar.style.width = p + '%';
+            }
+            if (bar) {
+                window.addEventListener('scroll', onScrollProgress, { passive: true });
+                window.addEventListener('resize', onScrollProgress);
+                if (mainEl) mainEl.addEventListener('scroll', onScrollProgress, { passive: true });
+                onScrollProgress();
+            }
+
+            const searchIn = document.getElementById('tool-nav-search');
+            const meta = document.getElementById('tool-nav-meta');
+            const surprise = document.getElementById('tool-nav-surprise');
+            const filterBtns = document.querySelectorAll('.tool-nav-filter');
+            let activeNavFilter = 'all';
+
+            function navCardText(a) {
+                return (a.textContent || '').replace(/\s+/g, ' ').trim().toLowerCase();
+            }
+            function isAiHref(href) {
+                return (href || '').indexOf('#ai') !== -1;
+            }
+
+            function applyNavFilter() {
+                const links = [...document.querySelectorAll('#nav a.nav-link')];
+                if (!links.length) return;
+                const q = (searchIn && searchIn.value || '').trim().toLowerCase();
+                let shown = 0;
+                links.forEach((a) => {
+                    const href = a.getAttribute('href') || '';
+                    const ai = isAiHref(href);
+                    const catOk = activeNavFilter === 'all' || (activeNavFilter === 'ai' && ai) || (activeNavFilter === 'other' && !ai);
+                    const textOk = !q || navCardText(a).indexOf(q) !== -1;
+                    const visible = catOk && textOk;
+                    a.classList.toggle('hidden', !visible);
+                    if (visible) shown++;
+                });
+                if (meta) {
+                    meta.textContent = shown === links.length && !q && activeNavFilter === 'all'
+                        ? links.length + ' tools — filter or try Surprise me.'
+                        : 'Showing ' + shown + ' of ' + links.length + '.';
+                }
+            }
+
+            function setNavFilterButtons(next) {
+                activeNavFilter = next;
+                filterBtns.forEach((btn) => {
+                    const f = btn.getAttribute('data-tool-nav-filter');
+                    const on = f === next;
+                    btn.classList.toggle('border-primary', on);
+                    btn.classList.toggle('bg-primary/25', on);
+                    btn.classList.toggle('text-white', on);
+                    btn.classList.toggle('border-slate-600', !on);
+                    btn.classList.toggle('bg-slate-800/80', !on);
+                    btn.classList.toggle('text-slate-300', !on);
+                });
+            }
+
+            if (searchIn) searchIn.addEventListener('input', applyNavFilter);
+            filterBtns.forEach((btn) => {
+                btn.addEventListener('click', () => {
+                    setNavFilterButtons(btn.getAttribute('data-tool-nav-filter') || 'all');
+                    applyNavFilter();
+                });
+            });
+            if (surprise) {
+                surprise.addEventListener('click', () => {
+                    const pool = [...document.querySelectorAll('#nav a.nav-link:not(.hidden)')];
+                    if (!pool.length) return;
+                    const pick = pool[Math.floor(Math.random() * pool.length)];
+                    const h = pick.getAttribute('href');
+                    if (h) location.hash = h;
+                });
+            }
+            setNavFilterButtons('all');
+            applyNavFilter();
+        })();
 
         [...new Set(COPY_ATTACH_IDS)].forEach(attachCopyRow);
 
