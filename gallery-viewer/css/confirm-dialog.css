@@ -21,9 +21,12 @@
 }
 
 .confirm-dialog {
-    background: white;
+    background: rgba(15, 17, 28, 0.95);
+    backdrop-filter: var(--glass-blur);
+    -webkit-backdrop-filter: var(--glass-blur);
+    border: 1px solid var(--glass-border);
     border-radius: 16px;
-    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 24px 80px rgba(0, 0, 0, 0.5);
     width: 90%;
     max-width: 500px;
     overflow: hidden;

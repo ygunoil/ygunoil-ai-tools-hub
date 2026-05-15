@@ -7,14 +7,18 @@
 
 .empty-state {
     text-align: center;
-    padding: 60px 20px;
-    color: #7f8c8d;
+    padding: 80px 20px;
+    color: var(--text-muted);
 }
 
 .empty-icon {
     font-size: 4rem;
     margin-bottom: 20px;
-    color: #bdc3c7;
+    background: linear-gradient(135deg, rgba(99, 102, 241, 0.4), rgba(6, 182, 212, 0.4));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: iconPulse 3s ease-in-out infinite;
 }
 
 .gallery-grid {
@@ -35,38 +39,77 @@
 
 /* Picture card */
 .photo-card {
-    background-color: white;
-    border-radius: 12px;
+    background: var(--card-bg);
+    border-radius: var(--radius-lg);
     overflow: hidden;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
-    border: none;
-    transition: transform 0.3s cubic-bezier(0.25, 0.8, 0.25, 1),
-        box-shadow 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    box-shadow: var(--card-shadow);
+    border: 1px solid var(--glass-border);
+    transition:
+        transform 0.45s var(--transition-smooth),
+        box-shadow 0.45s var(--transition-smooth),
+        border-color 0.45s ease;
     cursor: pointer;
     position: relative;
     user-select: none;
     content-visibility: auto;
     width: 100%;
     contain-intrinsic-size: auto var(--estimated-height, 300px);
+    animation: cardReveal 0.5s var(--transition-smooth) both;
+}
+
+@keyframes cardReveal {
+    from {
+        opacity: 0;
+        transform: translateY(20px) scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+.photo-card::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    padding: 1px;
+    background: linear-gradient(135deg, rgba(99, 102, 241, 0), rgba(6, 182, 212, 0));
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    pointer-events: none;
+    z-index: 5;
+    transition: background 0.45s ease;
 }
 
 .photo-card:hover,
 .photo-card.renaming,
 .photo-card.context-menu-active {
-    transform: translateY(-6px);
-    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12);
+    transform: translateY(-8px) scale(1.02);
+    box-shadow:
+        0 20px 50px rgba(0, 0, 0, 0.45),
+        0 0 30px var(--glow-primary);
+    border-color: rgba(99, 102, 241, 0.3);
     z-index: 10;
 }
 
+.photo-card:hover::before,
+.photo-card.renaming::before,
+.photo-card.context-menu-active::before {
+    background: linear-gradient(135deg, rgba(99, 102, 241, 0.6), rgba(6, 182, 212, 0.4));
+}
+
 .photo-card:active:not(.renaming):not(.context-menu-active) {
-    transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transform: translateY(-3px) scale(1.01);
     transition-duration: 0.1s;
 }
 
 .photo-card.dragging {
-    opacity: 0.4;
-    border: 2px dashed #2C3E50;
+    opacity: 0.35;
+    border: 2px dashed var(--accent-secondary);
+    transform: scale(0.97);
 }
 
 /* thumbnail */
@@ -74,7 +117,7 @@
     width: 100%;
     aspect-ratio: 1 / 1;
     overflow: hidden;
-    background-color: #f8f9fa;
+    background: rgba(255, 255, 255, 0.03);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -86,10 +129,16 @@
     width: 100%;
     height: 100%;
     display: block;
-    background-color: #f8f9fa;
-    transition: opacity 0.3s ease;
+    background: rgba(255, 255, 255, 0.03);
+    transition: opacity 0.3s ease, transform 0.6s var(--transition-smooth);
     object-fit: cover;
     pointer-events: none;
+}
+
+.photo-card:hover .thumbnail-canvas,
+.photo-card:hover .thumbnail-img,
+.photo-card:hover .thumbnail-svg {
+    transform: scale(1.08);
 }
 
 .thumbnail-canvas[data-loading="true"],
@@ -103,10 +152,11 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    color: #2C3E50;
+    color: var(--accent-secondary);
     font-size: 20px;
     z-index: 10;
     pointer-events: none;
+    filter: drop-shadow(0 0 8px var(--glow-secondary));
 }
 
 .loading-indicator i {
@@ -163,8 +213,9 @@
     width: 100%;
     height: 100%;
     display: block;
-    background-color: #f8f9fa;
+    background: rgba(255, 255, 255, 0.03);
     pointer-events: none;
+    transition: transform 0.6s var(--transition-smooth);
 }
 
 /* Card information */

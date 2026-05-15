@@ -4,14 +4,17 @@
     top: 0;
     left: 0;
     height: 100vh;
-    background-color: var(--sidebar-bg);
+    background: var(--sidebar-bg);
+    backdrop-filter: var(--glass-blur);
+    -webkit-backdrop-filter: var(--glass-blur);
     color: var(--sidebar-text);
     z-index: 900;
     transform: translateX(-100%);
-    transition: transform 0.3s ease;
+    transition: transform 0.3s var(--transition-smooth);
     display: flex;
     flex-direction: row;
-    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 4px 0 40px rgba(0, 0, 0, 0.4);
+    border-right: 1px solid var(--glass-border);
 }
 
 /* content wrapping layer */
@@ -181,13 +184,14 @@
 }
 
 .tree-node.active {
-    background-color: var(--accent-color);
+    background: linear-gradient(135deg, rgba(99, 102, 241, 0.7), rgba(6, 182, 212, 0.5));
     color: white;
+    box-shadow: 0 2px 12px var(--glow-primary);
 }
 
 .tree-node.drag-over {
-    background-color: rgba(52, 152, 219, 0.4);
-    border: 1px dashed #fff;
+    background-color: rgba(6, 182, 212, 0.25);
+    border: 1px dashed var(--accent-secondary);
 }
 
 /* Inline rename input box */

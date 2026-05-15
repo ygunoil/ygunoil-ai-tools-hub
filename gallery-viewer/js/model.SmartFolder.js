@@ -171,6 +171,7 @@ class SmartFolder {
     }
 
     /**
+     * Direct files in this folder only.
      * @returns {number}
      */
     getFileCount() {
@@ -178,14 +179,26 @@ class SmartFolder {
     }
 
     /**
-     * All files under this folder tree (walks `this.children` as before).
+     * Recursive count including all nested subfolders.
+     * @returns {number}
+     */
+    getTotalFileCount() {
+        let count = this.files.length;
+        for (const sub of this.subFolders) {
+            count += sub.getTotalFileCount();
+        }
+        return count;
+    }
+
+    /**
+     * All files under this folder tree.
      * @returns {SmartFile[]}
      */
     getAllFiles() {
         let allFiles = [...this.files];
 
-        for (const child of this.children) {
-            allFiles = allFiles.concat(child.getAllFiles());
+        for (const sub of this.subFolders) {
+            allFiles = allFiles.concat(sub.getAllFiles());
         }
 
         return allFiles;
@@ -322,6 +335,9 @@ class SmartFolder {
         }
         if (this.treeNode) {
             this.treeNode.updateCount();
+        }
+        if (this.parent) {
+            this.parent.updateCount();
         }
     }
 

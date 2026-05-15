@@ -13,7 +13,8 @@ async function openFolderPicker() {
         });
 
         appState.rootHandle = handle;
-        UI.hint.style.display = 'none';
+        UI.hint.classList.add('hint-fade-out');
+        setTimeout(() => { UI.hint.style.display = 'none'; }, 500);
         document.body.classList.add('folder-open');
         appState.foldersData.clear();
         appState.foldersData.set('ALL_MEDIA', ALL_MEDIA_FOLDER);
@@ -137,6 +138,8 @@ async function startBackgroundScan(parentFolder) {
         // Recurse into nested subfolders
         await startBackgroundScan(subFolderData);
     }
+
+    parentFolder.updateCount();
 }
 
 async function handleFolderClick(li) {

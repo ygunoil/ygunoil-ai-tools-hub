@@ -55,6 +55,7 @@ function renderGallery(fileList) {
             fileData.dom = createPhotoCard(fileData);
         }
         fileData.dom.dataset.currentIndex = index;
+        fileData.dom.style.animationDelay = `${Math.min(index * 0.04, 0.8)}s`;
         const colIndex = index % colCount;
         columns[colIndex].appendChild(fileData.dom);
     });

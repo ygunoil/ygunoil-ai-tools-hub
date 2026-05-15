@@ -126,6 +126,7 @@ function handleScrollZoneMouseLeave() {
 
 function isInExcludedZone(x, y) {
     const excludedElements = [
+        document.querySelector('.app-topbar'),      // Top brand bar
         UI.sidebar,                                 // Sidebar file tree
         UI.settingBar,                              // Settings bar
         document.getElementById('settingBtn'),      // Settings button

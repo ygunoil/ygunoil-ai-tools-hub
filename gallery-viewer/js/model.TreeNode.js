@@ -51,7 +51,7 @@ class TreeNode {
         this.li.className = 'tree-node root-node active';
         this.li.id = 'tree-root-node';
 
-        const count = this.folder.files ? this.folder.files.length : 0;
+        const count = this.folder.getTotalFileCount();
         this.li.innerHTML = `<i class="fas fa-folder-open"></i> ${this.folder.name} <span class="tree-node-count">(${count})</span>`;
 
         this.ul = document.createElement('ul');
@@ -73,7 +73,7 @@ class TreeNode {
         this.li = document.createElement('li');
         this.li.className = `tree-node ${isEmpty ? 'empty-folder' : ''}`;
         
-        const count = this.folder.files.length;
+        const count = this.folder.getTotalFileCount();
         this.li.innerHTML = `<i class="fas fa-folder-open"></i> ${this.folder.name} <span class="tree-node-count">(${count})</span>`;
 
         this.ul = document.createElement('ul');
@@ -251,8 +251,7 @@ class TreeNode {
 
         const countSpan = this.li.querySelector('.tree-node-count');
         if (countSpan) {
-            const count = this.folder.files.length;
-            countSpan.textContent = `(${count})`;
+            countSpan.textContent = `(${this.folder.getTotalFileCount()})`;
         }
     }
 
