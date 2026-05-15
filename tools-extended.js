@@ -44,6 +44,11 @@
         { id: 'round', label: 'Round' }
     ];
 
+    /** Sidebar links to full-page apps (not hash panels). Rendered after inline NAV in tools.html */
+    window.__TOOLS_STANDALONE_NAV = [
+        { href: 'gallery-viewer/index.html', label: 'Gallery Viewer', title: 'Local photos, videos & audio — opens full page' }
+    ];
+
     function M(t) {
         if (typeof window.showToolMsg === 'function') window.showToolMsg(t);
     }

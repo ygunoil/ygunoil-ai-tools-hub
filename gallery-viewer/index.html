@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('consent', 'default', {
+        ad_storage: 'denied',
+        analytics_storage: 'denied',
+        ad_user_data: 'denied',
+        ad_personalization: 'denied',
+        wait_for_update: 500
+      });
+    </script>
+    <script src="https://fundingchoicesmessages.google.com/i/pub-2809928683583930?ers=1" async></script>
+
+    <!-- AdSense: keep after consent stub -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2809928683583930" crossorigin="anonymous"></script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="mobile-web-app-capable" content="yes">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20100%20100%22%3E%0A%20%20%3Crect%20x%3D%221%22%20y%3D%221%22%20width%3D%2298%22%20height%3D%2298%22%20rx%3D%2214.7%22%20ry%3D%2214.7%22%20fill%3D%22%232d3e50%22%2F%3E%0A%20%20%3Cg%20transform%3D%22translate(11%2C%2015)%20scale(0.13671875)%22%3E%0A%20%20%20%20%3Cpath%20d%3D%22M160%2032c-35.3%200-64%2028.7-64%2064V320c0%2035.3%2028.7%2064%2064%2064H512c35.3%200%2064-28.7%2064-64V96c0-35.3-28.7-64-64-64H160zM396%20138.7l96%20144c4.9%207.4%205.4%2016.8%201.2%2024.6S480.9%20320%20472%20320H328%20280%20200c-9.2%200-17.6-5.3-21.6-13.6s-2.9-18.2%202.9-25.4l64-80c4.6-5.7%2011.4-9%2018.7-9s14.2%203.3%2018.7%209l17.3%2021.6%2056-84C360.5%20132%20368%20128%20376%20128s15.5%204%2020%2010.7zM192%20128a32%2032%200%201%201%2064%200%2032%2032%200%201%201%20-64%200zM48%20120c0-13.3-10.7-24-24-24S0%20106.7%200%20120V344c0%2075.1%2060.9%20136%20136%20136H456c13.3%200%2024-10.7%2024-24s-10.7-24-24-24H136c-48.6%200-88-39.4-88-88V120z%22%20fill%3D%22%23ffffff%22%2F%3E%0A%20%20%3C%2Fg%3E%0A%3C%2Fsvg%3E">
+    <title>Gallery Viewer</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/context-menu.css">
+    <link rel="stylesheet" href="css/confirm-dialog.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/spark-md5/3.0.2/spark-md5.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/exif-js"></script>
+</head>
+
+<body>
+    <div id="hint">
+        <div class="intro-content">
+            <i class="fas fa-images"></i>
+            <h1>Gallery Viewer</h1>
+            <div>
+                <p>Click Open folder — all processing stays on your device.</p>
+            </div>
+            <div class="features">
+                <div class="feature">
+                    <i class="fas fa-folder-tree"></i>
+                    <span>Folder tree</span>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-image"></i>
+                    <span>Thumbnail cache</span>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-info-circle"></i>
+                    <span>EXIF &amp; tags</span>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-folder-open"></i>
+                    <span>Organize files</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Sidebar: folder tree -->
+    <div id="sidebar">
+        <div id="sidebar-content">
+            <div class="sidebar-header">
+                <h3><i class="fas fa-folder-tree"></i> Folders</h3>
+                <button id="pinSidebarBtn" title="Pin sidebar"><i class="fas fa-thumbtack"></i></button>
+            </div>
+
+            <div id="virtualContainer">
+                <ul id="virtualTreeRoot"></ul>
+            </div>
+
+            <div class="separator-line"></div>
+
+            <div id="folderContainer">
+                <ul id="folderTreeRoot"></ul>
+            </div>
+
+        </div>
+
+        <div id="resize-helper"></div>
+    </div>
+
+    <!-- Floating sidebar toggle (visible after a folder is opened) -->
+    <button type="button" class="sidebar-toggle-btn" id="sidebarToggleBtn" title="Toggle folder tree" aria-label="Toggle folder tree">
+        <i class="fas fa-folder-tree"></i>
+    </button>
+
+    <!-- Floating settings control -->
+    <div class="settings-btn" id="settingBtn">
+        <i class="fas fa-cog"></i>
+    </div>
+
+    <!-- Filter bar -->
+    <div class="filter-container">
+        <input type="text" id="searchInput" placeholder="Search file name...">
+        <div class="filter-count" id="filterCount">
+            <span id="filteredCount">0</span>/<span id="totalCount">0</span>
+        </div>
+    </div>
+
+    <div class="main-content-wrapper">
+        <div class="container">
+            <!-- Settings drawer -->
+            <div id="settingBar" class="settings-modal">
+                <div class="settings-header">
+                    <h3><i class="fas fa-sliders-h"></i> Settings</h3>
+                    <div class="drag-handle">
+                        <i class="fas fa-arrows-alt"></i>
+                    </div>
+                </div>
+                <div class="settings-body">
+
+                    <div class="setting-item">
+                        <label>Current folder:</label>
+                        <span id="currentPathDisplay" style="word-break: break-all; font-size: 12px;">Not selected</span>
+                    </div>
+
+                    <div class="separator"></div>
+
+                    <div class="setting-item">
+                        <label for="sortSelect">Sort by: </label>
+                        <div style="display: flex; align-items: center; gap: 10px; flex: 1;">
+                            <select id="sortSelect" style="flex: 1;">
+                                <option value="name">File name</option>
+                                <option value="size">File size</option>
+                                <option value="date">Modification date</option>
+                            </select>
+                            <button id="sortToggleBtn" class="btn-small">
+                                <i class="fas fa-arrow-down-short-wide"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="setting-item">
+                        <label for="colCountSlider">Columns</label>
+                        <input type="range" id="colCountSlider" min="1" max="10" value="5" step="1">
+                        <span id="colCountValue">5 columns</span>
+                    </div>
+
+                    <div class="setting-item">
+                        <label for="thumbSizeSlider">Thumbnail size</label>
+                        <input type="range" id="thumbSizeSlider" min="100" max="1000" value="400" step="50">
+                        <span id="thumbSizeValue">400px</span>
+                    </div>
+
+                    <div class="setting-item">
+                        <label id="scrollZoneLabel" for="scrollSpeedSlider"
+                            style="cursor: pointer; align-items: center; user-select: none;">
+                            Edge scroll <i id="scrollZoneIcon" class="fas fa-toggle-on"></i>
+                        </label>
+                        <input type="range" id="scrollSpeedSlider" min="0.5" max="5" value="2" step="0.1">
+                        <span id="scrollSpeedValue">2.0</span>
+                    </div>
+
+                    <div class="separator"></div>
+
+                    <div class="setting-item info-item">
+                        <label>Storage / cache:</label>
+                        <span id="storageInfoValue" class="info-value">Calculating...</span>
+                    </div>
+
+                    <div class="setting-item button-group">
+                        <button id="refreshBtn" class="btn-block warning" title="Rescan the folder tree from disk">Rescan folders</button>
+                        <button id="clearCurrentBtn" class="btn-block warning" title="Drop cached thumbnails for the current view and redraw">Redraw current view</button>
+                        <button id="cleanOldBtn" class="btn-block danger" title="Remove thumbnail cache entries not accessed for 20 days or more">Clear old cache</button>
+                        <button id="clearAllBtn" class="btn-block danger" title="Delete all thumbnail cache entries">Clear all cache</button>
+                    </div>
+
+                </div>
+            </div>
+
+            <header class="header">
+                <h1><i class="fas fa-images"></i> Gallery Viewer</h1>
+            </header>
+
+            <div id="galleryContainer" class="gallery-container">
+            </div>
+
+            <div class="footer">
+                <p>Tip: drag items onto folders in the tree to move them. Right-click a file for Properties, Rename, or Delete — use Ctrl+Z to undo.</p>
+                <p class="footer-links">
+                    Related:
+                    <a href="https://haujetzhao.github.io/Panorama-Viewer-HTML/" target="_blank"
+                        rel="noopener">Panorama viewer</a> ·
+                    <a href="https://haujetzhao.github.io/Font-Awesome-Icon-Generator-HTML/" target="_blank"
+                        rel="noopener">Icon generator</a> ·
+                    <a href="https://haujetzhao.github.io/ShortcutMapper_Chinese/" target="_blank"
+                        rel="noopener">Shortcut map</a> ·
+                    <a href="https://www.bilibili.com/video/BV1tt4y1d75s/" target="_blank"
+                        rel="noopener">CapsWriter</a>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Lightbox -->
+    <div id="modal" class="modal hidden">
+        <div class="modal-content">
+            <img id="modalImage" draggable="false" alt="Full view">
+        </div>
+        <div id="modalLoader" class="loader hidden"><i class="fas fa-spinner fa-spin"></i></div>
+    </div>
+
+    <!-- File properties modal -->
+    <div id="propertiesModal" class="modal hidden">
+        <div class="modal-content properties-content">
+            <div class="props-header">
+                <h3>Properties</h3>
+                <button class="close-props-btn"><i class="fas fa-times"></i></button>
+            </div>
+            <div class="props-body" id="propsBodyContent">
+                <!-- Dynamically generate content -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Edge scroll zones -->
+    <div id="topScrollZone" class="scrollZone top-scroll-zone"></div>
+    <div id="bottomScrollZone" class="scrollZone bottom-scroll-zone"></div>
+
+    <!-- Hidden file input -->
+    <input type="file" id="folderInput" webkitdirectory multiple style="display: none;">
+    <!-- Toast container -->
+    <div id="toastContainer"></div>
+
+    <script src="js/browser-compatibility.js"></script>
+    <script src="js/file-types.js"></script>
+    <script src="js/state.js"></script>
+    <script src="js/model.SmartFile.js"></script>
+    <script src="js/model.TreeNode.js"></script>
+    <script src="js/model.SmartFolder.js"></script>
+    <script src="js/utils.js"></script>
+    <script src="js/ui.js"></script>
+    <script src="js/db.js"></script>
+    <script src="js/thumbnail-strategies.js"></script>
+    <script src="js/thumbnails.js"></script>
+    <script src="js/gallery.js"></script>
+    <script src="js/sidebar.js"></script>
+    <script src="js/context-menu-manager.js"></script>
+    <script src="js/confirm-dialog.js"></script>
+    <script src="js/operation-history.js"></script>
+    <script src="js/audio-player.js"></script>
+    <script src="js/modal.js"></script>
+    <script src="js/recovery.js"></script>
+    <script src="js/filesystem.js"></script>
+    <script src="js/id3-parser.js"></script>
+    <script src="js/metadata-strategies.js"></script>
+    <script src="js/properties.js"></script>
+    <script src="js/scrollzone.js"></script>
+    <script src="js/events.js"></script>
+    <script src="js/main.js"></script>
+    <noscript>
+        <div
+            style="position: fixed; top: 0; left: 0; right: 0; background: #e74c3c; color: white; padding: 10px; text-align: center; z-index: 9999;">
+            JavaScript is disabled. Enable JavaScript for full functionality.
+        </div>
+    </noscript>
+</body>
+
+</html>
