@@ -20,6 +20,52 @@
     display: none;
 }
 
+/* Lightbox prev/next — fixed to viewport, outside .modal-content (pan/zoom only affects content) */
+.lightbox-nav-btn {
+    position: fixed;
+    z-index: 1002;
+    top: 50%;
+    transform: translateY(-50%);
+    display: none;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 16px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    border-radius: 12px;
+    background: rgba(12, 14, 22, 0.65);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    color: rgba(255, 255, 255, 0.92);
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    pointer-events: auto;
+    transition: background 0.2s, border-color 0.2s, opacity 0.2s;
+}
+
+.lightbox-nav-btn:hover:not(:disabled) {
+    background: rgba(99, 102, 241, 0.35);
+    border-color: rgba(129, 140, 248, 0.55);
+}
+
+.lightbox-nav-btn:disabled {
+    opacity: 0.28;
+    cursor: not-allowed;
+}
+
+.lightbox-nav-prev {
+    left: max(16px, env(safe-area-inset-left, 0px));
+}
+
+.lightbox-nav-next {
+    right: max(16px, env(safe-area-inset-right, 0px));
+}
+
+.lightbox-nav-label {
+    font-size: 14px;
+    letter-spacing: 0.02em;
+}
+
 @keyframes modalFadeIn {
     from { opacity: 0; }
     to { opacity: 1; }

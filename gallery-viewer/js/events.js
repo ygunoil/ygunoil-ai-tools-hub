@@ -60,9 +60,9 @@ function setupEventListeners() {
     const closePropsBtn = document.querySelector('.close-props-btn');
     const propsModal = document.getElementById('propertiesModal');
     if (closePropsBtn && propsModal) {
-        closePropsBtn.addEventListener('click', () => propsModal.classList.add('hidden'));
+        closePropsBtn.addEventListener('click', () => closePropertiesModal());
         propsModal.addEventListener('click', (e) => {
-            if (e.target === propsModal) propsModal.classList.add('hidden');
+            if (e.target === propsModal) closePropertiesModal();
         });
 
         // Prevent scroll wheel events from bubbling to the background
@@ -100,6 +100,14 @@ function handleContextMenu(e) {
 function handleKeyDown(e) {
     const tag = document.activeElement.tagName;
     if (tag === 'INPUT' || tag === 'TEXTAREA') return;
+
+    if (isPropertiesModalOpen()) {
+        if (e.key === 'Escape') {
+            e.preventDefault();
+            closePropertiesModal();
+            return;
+        }
+    }
 
     const isCtrl = e.ctrlKey || e.metaKey;
     const key = e.key.toLowerCase();

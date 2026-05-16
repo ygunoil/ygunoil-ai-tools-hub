@@ -12,7 +12,8 @@ const domToFolderMap = new WeakMap();
 
 const globals = {
     currentDisplayList: [],
-    visibleFileList: [], // On-screen list after filtering and sorting
+    /** Filtered gallery row order (search applied); used by lightbox / keyboard. */
+    visibleFileList: [],
     get currentImageIndex() { return this._currentImageIndex || -1; },
     set currentImageIndex(val) { this._currentImageIndex = val; }
 };

@@ -1,21 +1,13 @@
 
-const EXIF_MAP = {
-    'Make': 'Camera make', 'Model': 'Model', 'LensModel': 'Lens', 'Software': 'Software',
-    'ExposureTime': 'Exposure time', 'FNumber': 'Aperture (f-number)', 'ISOSpeedRatings': 'ISO',
-    'FocalLength': 'Focal length', 'FocalLengthIn35mmFilm': '35mm equivalent focal length',
-    'ExposureBias': 'Exposure compensation', 'MeteringMode': 'Metering mode', 'Flash': 'Flash',
-    'WhiteBalance': 'White balance', 'DateTimeOriginal': 'Date taken',
-    'PixelXDimension': 'Width', 'PixelYDimension': 'Height',
-    'ResolutionUnit': 'Resolution unit', 'Orientation': 'Orientation', 'ColorSpace': 'Color space',
-    'GPSLatitude': 'Latitude', 'GPSLongitude': 'Longitude', 'GPSAltitude': 'Altitude'
-};
+function isPropertiesModalOpen() {
+    const modal = document.getElementById('propertiesModal');
+    return modal && !modal.classList.contains('hidden');
+}
 
-const EXIF_GROUPS = {
-    'GPS location': ['GPSLatitude', 'GPSLongitude', 'GPSAltitude'],
-    'Device': ['Make', 'Model', 'LensModel', 'Software'],
-    'Capture settings': ['DateTimeOriginal', 'ExposureTime', 'FNumber', 'ISOSpeedRatings', 'FocalLength', 'FocalLengthIn35mmFilm', 'ExposureBias', 'MeteringMode', 'Flash', 'WhiteBalance'],
-    'Image': ['PixelXDimension', 'PixelYDimension', 'ColorSpace', 'Orientation'],
-};
+function closePropertiesModal() {
+    const modal = document.getElementById('propertiesModal');
+    if (modal) modal.classList.add('hidden');
+}
 
 function showImageProperties() {
     const menu = UI.contextMenu;
@@ -50,6 +42,24 @@ function showImageProperties() {
         renderProperties(fileData, metadata, fileExt);
     })();
 }
+
+const EXIF_MAP = {
+    'Make': 'Camera make', 'Model': 'Model', 'LensModel': 'Lens', 'Software': 'Software',
+    'ExposureTime': 'Exposure time', 'FNumber': 'Aperture (f-number)', 'ISOSpeedRatings': 'ISO',
+    'FocalLength': 'Focal length', 'FocalLengthIn35mmFilm': '35mm equivalent focal length',
+    'ExposureBias': 'Exposure compensation', 'MeteringMode': 'Metering mode', 'Flash': 'Flash',
+    'WhiteBalance': 'White balance', 'DateTimeOriginal': 'Date taken',
+    'PixelXDimension': 'Width', 'PixelYDimension': 'Height',
+    'ResolutionUnit': 'Resolution unit', 'Orientation': 'Orientation', 'ColorSpace': 'Color space',
+    'GPSLatitude': 'Latitude', 'GPSLongitude': 'Longitude', 'GPSAltitude': 'Altitude'
+};
+
+const EXIF_GROUPS = {
+    'GPS location': ['GPSLatitude', 'GPSLongitude', 'GPSAltitude'],
+    'Device': ['Make', 'Model', 'LensModel', 'Software'],
+    'Capture settings': ['DateTimeOriginal', 'ExposureTime', 'FNumber', 'ISOSpeedRatings', 'FocalLength', 'FocalLengthIn35mmFilm', 'ExposureBias', 'MeteringMode', 'Flash', 'WhiteBalance'],
+    'Image': ['PixelXDimension', 'PixelYDimension', 'ColorSpace', 'Orientation'],
+};
 
 function renderProperties(fileData, metadata, fileExt) {
     const container = document.getElementById('propsBodyContent');

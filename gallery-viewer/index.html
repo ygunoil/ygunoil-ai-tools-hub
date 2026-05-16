@@ -191,8 +191,14 @@
         </div>
     </div>
 
-    <!-- Lightbox -->
+    <!-- Lightbox (click card to open — prev/next live here, not on Properties) -->
     <div id="modal" class="modal hidden">
+        <button type="button" id="lightboxPrevBtn" class="lightbox-nav-btn lightbox-nav-prev" aria-label="上一个" title="上一个 (←)">
+            <i class="fas fa-chevron-left" aria-hidden="true"></i><span class="lightbox-nav-label">上一个</span>
+        </button>
+        <button type="button" id="lightboxNextBtn" class="lightbox-nav-btn lightbox-nav-next" aria-label="下一个" title="下一个 (→)">
+            <span class="lightbox-nav-label">下一个</span><i class="fas fa-chevron-right" aria-hidden="true"></i>
+        </button>
         <div class="modal-content">
             <img id="modalImage" draggable="false" alt="Full view">
         </div>
@@ -204,7 +210,7 @@
         <div class="modal-content properties-content">
             <div class="props-header">
                 <h3>Properties</h3>
-                <button class="close-props-btn"><i class="fas fa-times"></i></button>
+                <button type="button" class="close-props-btn" aria-label="Close"><i class="fas fa-times"></i></button>
             </div>
             <div class="props-body" id="propsBodyContent">
                 <!-- Dynamically generate content -->

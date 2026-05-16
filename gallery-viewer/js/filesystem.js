@@ -229,6 +229,7 @@ async function loadFolder(folderData) {
                 : 'No supported media files in this folder.'
         }</div>`;
         updateFilterCount(0, 0);
+        globals.visibleFileList = [];
         return;
     }
 
@@ -260,6 +261,7 @@ async function switchToAllPhotos() {
     globals.currentDisplayList = allFiles;
 
     if (allFiles.length === 0) {
+        globals.visibleFileList = [];
         UI.gallery.innerHTML = '<div class="empty-state">No media yet — scanning subfolders in the background. Files will appear here automatically.</div>';
     } else {
         renderGallery(allFiles);

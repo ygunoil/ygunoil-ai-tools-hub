@@ -125,6 +125,8 @@ class ImageModal {
         this.modalImage = UI.modalImage;
         this.modalLoader = UI.modalLoader;
         this.modalContent = this.modal.querySelector('.modal-content');
+        this.prevBtn = document.getElementById('lightboxPrevBtn');
+        this.nextBtn = document.getElementById('lightboxNextBtn');
 
         // DOM cache (LRU by insert order in Map)
         this.maxCacheSize = 10; // Max cached media DOM nodes
@@ -242,6 +244,42 @@ class ImageModal {
                 this.isHoveringVideo = false;
             }
         });
+
+        if (this.prevBtn) {
+            this.prevBtn.addEventListener('click', (e) => {
+                e.preventDefault();
+                e.stopPropagation();
+                if (this.currentIndex > 0) this.openByIndex(this.currentIndex - 1);
+            });
+        }
+        if (this.nextBtn) {
+            this.nextBtn.addEventListener('click', (e) => {
+                e.preventDefault();
+                e.stopPropagation();
+                const list = globals.visibleFileList || [];
+                if (this.currentIndex >= 0 && this.currentIndex < list.length - 1) {
+                    this.openByIndex(this.currentIndex + 1);
+                }
+            });
+        }
+    }
+
+    /**
+     * Show / hide lightbox prev-next (fixed to viewport; not inside panned .modal-content).
+     */
+    updateLightboxNavButtons() {
+        const list = globals.visibleFileList || [];
+        const len = list.length;
+        const show = this.isOpen && len > 1;
+        const idx = this.currentIndex;
+        if (this.prevBtn) {
+            this.prevBtn.style.display = show ? 'inline-flex' : 'none';
+            this.prevBtn.disabled = !show || idx <= 0;
+        }
+        if (this.nextBtn) {
+            this.nextBtn.style.display = show ? 'inline-flex' : 'none';
+            this.nextBtn.disabled = !show || idx < 0 || idx >= len - 1;
+        }
     }
 
     /**
@@ -273,6 +311,7 @@ class ImageModal {
      */
     handleWheel(e) {
         if (!this.isOpen) return;
+        if (e.target.closest('.lightbox-nav-btn')) return;
         e.preventDefault();
 
         const zoomIntensity = 0.15;
@@ -298,6 +337,8 @@ class ImageModal {
      */
     handleMouseDown(e) {
         if (!this.isOpen) return;
+
+        if (e.target.closest('.lightbox-nav-btn')) return;
 
         // Right click: keep native context menu
         if (e.button === 2) return;
@@ -347,7 +388,8 @@ class ImageModal {
         if (isClick) {
             const mediaElement = e.target.closest('video, audio');
             const audioPlayer = e.target.closest('.modal-audio-player');
-            if (!mediaElement && !audioPlayer) {
+            const navBtn = e.target.closest('.lightbox-nav-btn');
+            if (!mediaElement && !audioPlayer && !navBtn) {
                 this.close();
             }
         }
@@ -424,7 +466,8 @@ class ImageModal {
                 if (isTap) {
                     // Ignore taps on the audio player chrome
                     const audioPlayer = e.target.closest('.modal-audio-player');
-                    if (!audioPlayer) {
+                    const navBtn = e.target.closest('.lightbox-nav-btn');
+                    if (!audioPlayer && !navBtn) {
                         this.close();
                     }
                 }
@@ -482,6 +525,7 @@ class ImageModal {
         this.modal.classList.remove('hidden');
         this.modalLoader.classList.remove('hidden');
         this.resetTransform();
+        this.updateLightboxNavButtons();
     }
 
 
@@ -520,6 +564,8 @@ class ImageModal {
                     throw err;
                 }
             }
+
+            this.updateLightboxNavButtons();
 
         } catch (err) {
             console.error("Failed to open lightbox:", err);
@@ -567,6 +613,7 @@ class ImageModal {
 
         // Hide content node; LRU cache retains detached DOM
         this.clearCurrentDisplay();
+        this.updateLightboxNavButtons();
     }
 
     /**
@@ -595,6 +642,7 @@ class ImageModal {
 
 // Global lightbox instance
 const imageModal = new ImageModal();
+window.imageModal = imageModal;
 
 // Legacy no-op (listeners wired in constructor)
 function setupModalEvents() {

@@ -36,10 +36,13 @@ function renderGallery(fileList) {
         let valA, valB;
         if (sortField === 'name') {
             return windowsCompareStrings(a.name, b.name) * (isAsc ? 1 : -1);
-        } else if (sortField === 'size') {
-            valA = a.size; valB = b.size;
+        }
+        if (sortField === 'size') {
+            valA = a.size;
+            valB = b.size;
         } else {
-            valA = a.lastModified; valB = b.lastModified;
+            valA = a.lastModified;
+            valB = b.lastModified;
         }
         return (valA - valB) * (isAsc ? 1 : -1);
     });
@@ -47,7 +50,6 @@ function renderGallery(fileList) {
     const approxCardWidth = (window.innerWidth - 300) / colCount;
     wrapper.style.setProperty('--estimated-height', `${approxCardWidth + 60}px`);
 
-    // Refresh global visible list for modal navigation
     globals.visibleFileList = displayFiles;
 
     displayFiles.forEach((fileData, index) => {
